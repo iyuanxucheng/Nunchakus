@@ -1,0 +1,22 @@
+{
+  "name": "Nunchakus",
+  "version": "0.1.0",
+  "summary": "A short description of Nunchakus.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Runs/Nunchakus",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Runs": "runs.wang.dev@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Runs/Nunchakus.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "Nunchakus/Classes/**/*"
+}

@@ -1,0 +1,6 @@
+framework module Nunchakus {
+  umbrella header "Nunchakus-umbrella.h"
+
+  export *
+  module * { export * }
+}
