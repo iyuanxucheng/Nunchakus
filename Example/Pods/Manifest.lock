@@ -1,27 +1,16 @@
 PODS:
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
   - Nunchakus (0.1.0)
 
 DEPENDENCIES:
-  - FBSnapshotTestCase
   - Nunchakus (from `../`)
-
-SPEC REPOS:
-  trunk:
-    - FBSnapshotTestCase
 
 EXTERNAL SOURCES:
   Nunchakus:
     :path: "../"
 
 SPEC CHECKSUMS:
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  Nunchakus: dfe93216f94ed3670e0eca02794943d95248754b
+  Nunchakus: 24c57caa7457897f1947a33635fd1e7e587db861
 
-PODFILE CHECKSUM: b15747c7f551bfc15ad5995bebe0e97c74b79678
+PODFILE CHECKSUM: bb9a23153b7f9b87ccca8ff646e66e526a2af209
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.7.3
