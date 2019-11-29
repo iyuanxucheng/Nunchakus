@@ -1,9 +1,9 @@
 {
   "name": "Nunchakus",
   "version": "0.1.0",
-  "summary": "A short description of Nunchakus.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Runs/Nunchakus",
+  "summary": "Nunchakus For CocoaUI Layout.",
+  "description": "Add long description of the pod here.",
+  "homepage": "https://github.com/RunsCode/Nunchakus",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "Runs": "runs.wang.dev@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Runs/Nunchakus.git",
+    "git": "https://github.com/RunsCode/Nunchakus.git",
     "tag": "0.1.0"
   },
   "platforms": {
