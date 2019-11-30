@@ -31,7 +31,7 @@
 #endif
 
 - (NSUInteger)hash {
-    return _attribute << 8;
+    return _attribute << 16 ^ NSUIntegerMax;
 }
 
 - (instancetype)initWithAttribute:(NKLayoutAttribute)attribute {

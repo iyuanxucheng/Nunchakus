@@ -9,6 +9,9 @@
 
 @property (nonatomic, weak) UIView *context;
 
+@property (nonatomic, strong) NSMutableSet *marginSet;
+@property (nonatomic, strong) NSMutableSet *paddingSet;
+
 @end
 
 @implementation NKLayout
@@ -27,18 +30,28 @@
     return self;
 }
 
-
-- (CGRect)calculateFrameWithMargins:(NSArray<NKMargin *> *)margins {
+- (CGRect)calculateFrameWithMargins:(NSSet<NKMargin *> *)margins {
     return CGRectZero;
 }
 
-- (CGRect)calculateFrameWithPadding:(NSArray<NKPadding *> *)paddings {
-    return CGRectZero;
-}
+//- (CGRect)calculateFrameWithPadding:(NSSet<NKPadding *> *)paddings {
+//    return CGRectZero;
+//}
 
 - (void)layoutWithFrame:(CGRect)frame {
     _context.frame = frame;
 }
 
+- (NSMutableSet *)marginSet {
+    if (_marginSet) return _marginSet;
+    _marginSet = [[NSMutableSet alloc] initWithCapacity:4];
+    return _marginSet;
+}
+
+- (NSMutableSet *)paddingSet {
+    if (_paddingSet) return _paddingSet;
+    _paddingSet = [[NSMutableSet alloc] initWithCapacity:4];
+    return _paddingSet;
+}
 
 @end

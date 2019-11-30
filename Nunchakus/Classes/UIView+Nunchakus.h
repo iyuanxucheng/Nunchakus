@@ -18,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)layout_make:(void(^)(NKLayout *layout))maker;
 
-
 @end
 
 NS_ASSUME_NONNULL_END

@@ -18,8 +18,6 @@
 		4939108E02721096822DC38120DFEDA7 /* NKPadding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB13465EF1167D05D7CF4FE4DE3B627 /* NKPadding.m */; };
 		4B712666E7581E05285F4B83B9F26489 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		4C1BCBE78CCF7CA794F14107D5AEE5AE /* NKLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = B298321CC2E1D0B7A4E86D477E3FEAB6 /* NKLayout.m */; };
-		4FE9833A23911E4900E06B48 /* NKMultiple.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FE9833823911E4900E06B48 /* NKMultiple.h */; };
-		4FE9833B23911E4900E06B48 /* NKMultiple.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FE9833923911E4900E06B48 /* NKMultiple.m */; };
 		737F683740B152A741655989C3485A79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		78CC54CB61B2BCF7C65020D214964514 /* NKMacroConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 271772436EC7C904E055FD513A9160BD /* NKMacroConstant.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7CEDDA996C059055528F906E5AAE07B2 /* Pods-Nunchakus_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58581C32831C2DB11CAEEC75C7207716 /* Pods-Nunchakus_Example-dummy.m */; };
@@ -29,6 +27,8 @@
 		97741031DB80CE0E3EA38278850705CF /* NKLayoutEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DC3E091E1956AC9475536088CBB88FF /* NKLayoutEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97EEA78E07407EF041A6B42024B8FEFE /* Pods-Nunchakus_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5752A1D99FF042833241828B8F10BAC6 /* Pods-Nunchakus_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A4D41B6B77DB5B3B0C23932631A2A2EA /* NKPadding.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B0EC409882E3C0103FCDEE561C884FC /* NKPadding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C45A7AE3533EE8BD36FD53C7A22AF18C /* NKMultiple.m in Sources */ = {isa = PBXBuildFile; fileRef = E9673872382629A4EA5B15BC1576D07B /* NKMultiple.m */; };
+		F308AE383BB8AB3B5005ED9CFF2E90D3 /* NKMultiple.h in Headers */ = {isa = PBXBuildFile; fileRef = 11649897F9EDC169745CC0077389D856 /* NKMultiple.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,34 +50,33 @@
 
 /* Begin PBXFileReference section */
 		0036BB47DFCF9690FCD71217EBF8F8E3 /* Pods-Nunchakus_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Nunchakus_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		04850FD20EC1D018F12FCF4979F40310 /* Pods_Nunchakus_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nunchakus_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		04850FD20EC1D018F12FCF4979F40310 /* Pods_Nunchakus_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Nunchakus_Tests.framework; path = "Pods-Nunchakus_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F43C8BB4CF89FA5A5A8B323EF4FF529 /* NKMargin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NKMargin.m; path = Nunchakus/Classes/NKMargin.m; sourceTree = "<group>"; };
 		10A30A39F32F5AA5894F1B1138378080 /* Nunchakus-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nunchakus-umbrella.h"; sourceTree = "<group>"; };
+		11649897F9EDC169745CC0077389D856 /* NKMultiple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKMultiple.h; path = Nunchakus/Classes/NKMultiple.h; sourceTree = "<group>"; };
 		1ED453BD544E0F0023CBEFD94CDA8BD9 /* Pods-Nunchakus_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Nunchakus_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		271772436EC7C904E055FD513A9160BD /* NKMacroConstant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKMacroConstant.h; path = Nunchakus/Classes/NKMacroConstant.h; sourceTree = "<group>"; };
 		2A98163D040909FB25615F15C9DE3782 /* Pods-Nunchakus_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Nunchakus_Tests-Info.plist"; sourceTree = "<group>"; };
 		2AB3F5D20F804E3232CB4F593305D678 /* Nunchakus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Nunchakus.modulemap; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		3709675A2F71349B4F44C9FDBC848B2A /* Pods_Nunchakus_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nunchakus_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3709675A2F71349B4F44C9FDBC848B2A /* Pods_Nunchakus_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Nunchakus_Example.framework; path = "Pods-Nunchakus_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0EC409882E3C0103FCDEE561C884FC /* NKPadding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKPadding.h; path = Nunchakus/Classes/NKPadding.h; sourceTree = "<group>"; };
 		43FFF0F49D99F1AD08E4400B4714C8F8 /* Nunchakus-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nunchakus-prefix.pch"; sourceTree = "<group>"; };
 		464EA31DDB38F53F8047FB4A44A5384B /* Nunchakus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nunchakus.h; path = Nunchakus/Classes/Nunchakus.h; sourceTree = "<group>"; };
 		4C96BE5AD831D8CEEC8F01FD3C0FBC4F /* UIView+Nunchakus.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Nunchakus.m"; path = "Nunchakus/Classes/UIView+Nunchakus.m"; sourceTree = "<group>"; };
-		4FE9833823911E4900E06B48 /* NKMultiple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NKMultiple.h; path = Nunchakus/Classes/NKMultiple.h; sourceTree = "<group>"; };
-		4FE9833923911E4900E06B48 /* NKMultiple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NKMultiple.m; path = Nunchakus/Classes/NKMultiple.m; sourceTree = "<group>"; };
 		5752A1D99FF042833241828B8F10BAC6 /* Pods-Nunchakus_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Nunchakus_Example-umbrella.h"; sourceTree = "<group>"; };
 		5814E591EE47DB31AF8AB831E2B168A5 /* Pods-Nunchakus_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Nunchakus_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		58581C32831C2DB11CAEEC75C7207716 /* Pods-Nunchakus_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Nunchakus_Example-dummy.m"; sourceTree = "<group>"; };
 		62E49E4C7F63F0CBE5FE8932A33656B7 /* Pods-Nunchakus_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Nunchakus_Tests-dummy.m"; sourceTree = "<group>"; };
-		641C83984E788F3E0CDDBF9D16305CCE /* Nunchakus.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Nunchakus.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		641C83984E788F3E0CDDBF9D16305CCE /* Nunchakus.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Nunchakus.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		660CB13B46E082B92E7D13968C64D0EE /* UIView+Nunchakus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Nunchakus.h"; path = "Nunchakus/Classes/UIView+Nunchakus.h"; sourceTree = "<group>"; };
 		6857735B5FFA67810B6469318AB660ED /* Pods-Nunchakus_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Nunchakus_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7CA8FFD43A5EE66D1F48D17FAF421816 /* Pods-Nunchakus_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Nunchakus_Example.modulemap"; sourceTree = "<group>"; };
 		8AB13465EF1167D05D7CF4FE4DE3B627 /* NKPadding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NKPadding.m; path = Nunchakus/Classes/NKPadding.m; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DC3E091E1956AC9475536088CBB88FF /* NKLayoutEnum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKLayoutEnum.h; path = Nunchakus/Classes/NKLayoutEnum.h; sourceTree = "<group>"; };
 		A1096FD0D79579D70AAB28C00957EE7A /* Nunchakus-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Nunchakus-Info.plist"; sourceTree = "<group>"; };
-		AC3C467B34618F2937196AD24A521C8F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AC3C467B34618F2937196AD24A521C8F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		AD8B0EEF4766E328B7147D1A7D499891 /* Pods-Nunchakus_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Nunchakus_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		AF827890A21C69FB2C007349FFDD9268 /* Pods-Nunchakus_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Nunchakus_Example-frameworks.sh"; sourceTree = "<group>"; };
 		B298321CC2E1D0B7A4E86D477E3FEAB6 /* NKLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NKLayout.m; path = Nunchakus/Classes/NKLayout.m; sourceTree = "<group>"; };
@@ -85,14 +84,15 @@
 		B55AF88D15C50A5D0C04FC9F9DD6AAE3 /* Pods-Nunchakus_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Nunchakus_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		C76DB115A5D2D132F0F8AD9390EBB2DC /* Pods-Nunchakus_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Nunchakus_Example-Info.plist"; sourceTree = "<group>"; };
 		C7A5B37A9B89EA95B89AD6142F0C7F1E /* NKLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKLayout.h; path = Nunchakus/Classes/NKLayout.h; sourceTree = "<group>"; };
-		DBF8469EAC05E5DEAB92164B577ADC74 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		DBF8469EAC05E5DEAB92164B577ADC74 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		E914317245736CFA05CF8CC3EEB763A4 /* Pods-Nunchakus_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Nunchakus_Example.release.xcconfig"; sourceTree = "<group>"; };
+		E9673872382629A4EA5B15BC1576D07B /* NKMultiple.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NKMultiple.m; path = Nunchakus/Classes/NKMultiple.m; sourceTree = "<group>"; };
 		ED4BCCB3CCE4E56B1B1B565A64C87F41 /* Pods-Nunchakus_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Nunchakus_Tests-umbrella.h"; sourceTree = "<group>"; };
 		EF80B2241A2ECD45BCEDA23955E4003F /* Pods-Nunchakus_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Nunchakus_Tests.modulemap"; sourceTree = "<group>"; };
 		F02FFE38744C480E4DC4126F9D7E8CC0 /* Nunchakus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nunchakus-dummy.m"; sourceTree = "<group>"; };
 		F6D4D4FCD4FAA057391D3B7C882DC9A5 /* Nunchakus.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nunchakus.xcconfig; sourceTree = "<group>"; };
 		F8E09B2ADA11A6D12288E880BC8E76C4 /* Pods-Nunchakus_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Nunchakus_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FFAEFD6FA662618BB030CF3B57376A91 /* Nunchakus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nunchakus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFAEFD6FA662618BB030CF3B57376A91 /* Nunchakus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Nunchakus.framework; path = Nunchakus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,14 +126,14 @@
 		18F95D7F252236A89127B112C9106D60 /* Nunchakus */ = {
 			isa = PBXGroup;
 			children = (
-				4FE9833823911E4900E06B48 /* NKMultiple.h */,
-				4FE9833923911E4900E06B48 /* NKMultiple.m */,
 				C7A5B37A9B89EA95B89AD6142F0C7F1E /* NKLayout.h */,
 				B298321CC2E1D0B7A4E86D477E3FEAB6 /* NKLayout.m */,
 				9DC3E091E1956AC9475536088CBB88FF /* NKLayoutEnum.h */,
 				271772436EC7C904E055FD513A9160BD /* NKMacroConstant.h */,
 				B41F7B7CEA6AB34108F6DA709CBC872E /* NKMargin.h */,
 				0F43C8BB4CF89FA5A5A8B323EF4FF529 /* NKMargin.m */,
+				11649897F9EDC169745CC0077389D856 /* NKMultiple.h */,
+				E9673872382629A4EA5B15BC1576D07B /* NKMultiple.m */,
 				3B0EC409882E3C0103FCDEE561C884FC /* NKPadding.h */,
 				8AB13465EF1167D05D7CF4FE4DE3B627 /* NKPadding.m */,
 				464EA31DDB38F53F8047FB4A44A5384B /* Nunchakus.h */,
@@ -276,11 +276,11 @@
 				97741031DB80CE0E3EA38278850705CF /* NKLayoutEnum.h in Headers */,
 				78CC54CB61B2BCF7C65020D214964514 /* NKMacroConstant.h in Headers */,
 				47BF88942FAB313391B6EDC2BF3B1097 /* NKMargin.h in Headers */,
+				F308AE383BB8AB3B5005ED9CFF2E90D3 /* NKMultiple.h in Headers */,
 				A4D41B6B77DB5B3B0C23932631A2A2EA /* NKPadding.h in Headers */,
 				92BB65FE3BEDD42E0933BBC0F9D61CC7 /* Nunchakus-umbrella.h in Headers */,
 				440D59038C17165E1191284A88C8D16F /* Nunchakus.h in Headers */,
 				1593C18C10BF377528AA2A6703189851 /* UIView+Nunchakus.h in Headers */,
-				4FE9833A23911E4900E06B48 /* NKMultiple.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,9 +425,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FE9833B23911E4900E06B48 /* NKMultiple.m in Sources */,
 				4C1BCBE78CCF7CA794F14107D5AEE5AE /* NKLayout.m in Sources */,
 				3FFEC968F6FA67BC6090AABB013C8FDB /* NKMargin.m in Sources */,
+				C45A7AE3533EE8BD36FD53C7A22AF18C /* NKMultiple.m in Sources */,
 				4939108E02721096822DC38120DFEDA7 /* NKPadding.m in Sources */,
 				47961EEBC3C18C0091310ED30BD7404E /* Nunchakus-dummy.m in Sources */,
 				1E24CB1AABB373A1E881240EBE64B1FA /* UIView+Nunchakus.m in Sources */,
@@ -606,7 +606,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
