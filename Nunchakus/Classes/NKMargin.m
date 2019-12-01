@@ -19,6 +19,8 @@
 
 @property (nonatomic, strong) NKMultiple *multipleOfAttribute;
 
+
+@property (nonatomic, strong) id attrValue;
 @end
 
 @implementation NKMargin
@@ -59,6 +61,13 @@
 - (NKMargin *(^)(NKLayoutAttributePriority))priorityOf {
     return ^(NKLayoutAttributePriority priority) {
         self.priorityOfAttribute = priority;
+        return self;
+    };
+}
+
+- (NKMargin * (^)(id))relativeTo{
+    return ^(id attr){
+        self.attrValue = attr;
         return self;
     };
 }

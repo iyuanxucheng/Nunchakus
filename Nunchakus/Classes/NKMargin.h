@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 
-@class NKMultiple;
+@class NKMultiple, NKAlignment;
 
 @interface NKMargin : NSObject
 
@@ -29,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NKMargin *height;
 @property (nonatomic, strong, readonly) NKMargin *centerX;
 @property (nonatomic, strong, readonly) NKMargin *centerY;
+
+@property (nonatomic, strong, readonly) NKAlignment *aligned;
 @property (nonatomic, strong, readonly) NKMultiple *multipleOfAttribute;
 
 @property (nonatomic, strong) NKMargin *(^stretch)(void);
