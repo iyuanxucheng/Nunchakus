@@ -15,11 +15,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign, readonly) CGFloat valueOfOffset;
 @property (nonatomic, assign, readonly) NKLayoutMarginAttribute relativeAttribute;
-
+/// UIView or NKMargin
 @property (nonatomic, strong, readonly) NKRelative *(^to)(id);
+/// UIView or NKMargin  value = 0
 @property (nonatomic, strong, readonly) NKRelative *(^on)(id);
+/// UIView or NKMargin
 @property (nonatomic, strong, readonly) NKRelative *(^in)(id);
-@property (nonatomic, strong, readonly) NKMargin *(^valueOf)(CGFloat);
+@property (nonatomic, strong, readonly) NKMargin *(^offset)(CGFloat);
 
 - (instancetype)initWithMargin:(NKMargin *)margin;
 

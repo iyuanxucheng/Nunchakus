@@ -31,17 +31,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NKMargin *centerX;
 @property (nonatomic, strong, readonly) NKMargin *centerY;
 @property (nonatomic, strong, readonly) NKMargin *edge;
-@property (nonatomic, strong, readonly) NKMargin *relativeMargin;
 
 @property (nonatomic, strong, readonly) NKAlignment *aligned;
 @property (nonatomic, strong, readonly) NKMultiple *multiple;
 @property (nonatomic, strong, readonly) NKRelative *relative;
 
 @property (nonatomic, strong, readonly) NKMargin *(^stretch)(void);
-@property (nonatomic, strong, readonly) NKMargin *(^valueOf)(CGFloat);
-@property (nonatomic, strong, readonly) NKMargin *(^priorityOf)(NKLayoutAttributePriority);
-/// UIView or NKMargin
-@property (nonatomic, strong, readonly) NKMargin *(^relativeTo)(id);
+@property (nonatomic, strong, readonly) NKMargin *(^priority)(NKLayoutAttributePriority);
 
 @property (nonatomic, strong) NKMargin *head;
 @property (nonatomic, strong) NKMargin *next;

@@ -69,7 +69,7 @@
     };
 }
 
-- (NKMargin *(^)(NKLayoutAttributePriority))priorityOf {
+- (NKMargin *(^)(NKLayoutAttributePriority))priority {
     return ^(NKLayoutAttributePriority priority) {
         self.priorityOfAttribute = priority;
         return self;

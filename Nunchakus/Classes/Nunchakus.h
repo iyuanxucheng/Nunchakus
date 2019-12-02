@@ -8,6 +8,7 @@
 #import "NKMargin.h"
 #import "NKMultiple.h"
 #import "NKAlignment.h"
+#import "NKRelative.h"
 
 #import "UIView+Nunchakus.h"
 

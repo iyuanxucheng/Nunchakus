@@ -34,7 +34,7 @@
     return self;
 }
 
-- (NKMargin *(^)(CGFloat))ratioOf {
+- (NKMargin *(^)(CGFloat))ratio {
     return ^(CGFloat value) {
         self.valueOfRatio = value;
         return self.margin;

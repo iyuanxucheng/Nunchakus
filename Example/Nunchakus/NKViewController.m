@@ -24,10 +24,18 @@
     };
     NSLog(@"NKViewController: viewDidLoad exit");
 
-    self.view.nk_left.aligned.with(self.view.superview.nk_left).priorityOf(NKLayoutAttributePriorityHight);
-    self.view.nk_right.relativeTo(self.view.superview.nk_right).valueOf(20).priorityOf(1000);
-    self.view.nk_left.right.bottom.top.relativeTo(self.view.superview);
+    self.view.nk_left.aligned.with(self.view.superview.nk_left).priority(NKLayoutAttributePriorityHight);
+    self.view.nk_right.relative.to(self.view.superview.nk_right).offset(20).priority(1000);
+    self.view.nk_top.multiple.by(self.view.superview).ratio(1.2);
+    self.view.nk_left.right.bottom.top.relative.to(self.view.superview);
+    self.view.nk_left.right.bottom.top.relative.in(self.view.superview);
+    self.view.nk_left.right.bottom.top.relative.on(self.view.superview);
     [self.view nk_make];
+    
+    [self.view nk_makeLayout:^(NKLayout * _Nonnull layout) {
+        layout.right.aligned.with(self.view.superview).priority(NKLayoutAttributePriorityLow).stretch();
+        layout.left.relative.to(self.view.superview).offset(90).stretch();
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

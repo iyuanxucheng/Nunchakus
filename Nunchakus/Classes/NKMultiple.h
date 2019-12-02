@@ -16,9 +16,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) CGFloat valueOfRatio;
 @property (nonatomic, assign, readonly) NKLayoutMarginAttribute multipleByAttribute;
 
-@property (nonatomic, strong) NKMargin *(^ratioOf)(CGFloat ratio);
+@property (nonatomic, strong, readonly) NKMargin *(^ratio)(CGFloat);
 /// UIView or NKMargin
-@property (nonatomic, strong) NKMultiple *(^by)(id);
+@property (nonatomic, strong, readonly) NKMultiple *(^by)(id);
 
 - (instancetype)initWithMargin:(NKMargin *)margin;
 

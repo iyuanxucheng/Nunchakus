@@ -12,6 +12,7 @@
 @interface NKRelative ()
 
 @property (nonatomic, assign) CGFloat valueOfOffset;
+@property (nonatomic, assign) NKLayoutRelativeAttribute relative;
 @property (nonatomic, assign) NKLayoutMarginAttribute relativeAttribute;
 
 @property (nonatomic, weak) NKMargin *margin;
@@ -34,8 +35,10 @@
     return self;
 }
 
-- (NKMargin * _Nonnull (^)(CGFloat))valueOf {
+- (NKMargin *(^)(CGFloat))offset {
     return ^(CGFloat value) {
+        if (NKLayoutRelativeOn == self.relative) return self.margin;
+        //
         self.valueOfOffset = value;
         return self.margin;
     };
@@ -44,6 +47,8 @@
 - (NKRelative *(^)(id))to {
     return ^(id attr) {
         [self attrbuteWithAttr:attr relative:NKLayoutRelativeTo];
+        //
+        self.relative = NKLayoutRelativeTo;
         return self;
     };
 }
@@ -51,6 +56,8 @@
 - (NKRelative *(^)(id))on {
     return ^(id attr) {
         [self attrbuteWithAttr:attr relative:NKLayoutRelativeOn];
+        //
+        self.relative = NKLayoutRelativeOn;
         return self;
     };
 }
@@ -58,6 +65,8 @@
 - (NKRelative * (^)(id))in {
     return ^(id attr) {
         [self attrbuteWithAttr:attr relative:NKLayoutRelativeIn];
+        //
+        self.relative = NKLayoutRelativeIn;
         return self;
     };
 }
@@ -69,34 +78,36 @@
         _relativeAttribute = [self attrbuteWithMargin:obj];
         return;
     }
+    
     if ([obj isKindOfClass:UIView.class]) {
-
-        if (NKLayoutRelativeTo == relative || NKLayoutRelativeOn == relative) {
-
-            switch (_margin.attribute) {
-                case NKLayoutMarginAttributeLeft:
-                    _relativeAttribute = NKLayoutMarginAttributeRight;
-                    break;
-                    case NKLayoutMarginAttributeTop:
-                    _relativeAttribute = NKLayoutMarginAttributeBottom;
-                        break;
-                    case NKLayoutMarginAttributeRight:
-                    _relativeAttribute = NKLayoutMarginAttributeLeft;
-                        break;
-                    case NKLayoutMarginAttributeBottom:
-                    _relativeAttribute = NKLayoutMarginAttributeTop;
-                        break;
-
-                default:
-                    break;
-            }
+        
+        if (NKLayoutRelativeIn == relative) {
+            _relativeAttribute = [self attrbuteWithMargin:_margin];
             return;
         }
-        _relativeAttribute = [self attrbuteWithMargin:_margin];
 
-    } else {
-        NSAssert(NO, @"Alignment type error ...");
+        switch (_margin.attribute) {
+            case NKLayoutMarginAttributeLeft:
+                _relativeAttribute = NKLayoutMarginAttributeRight;
+                break;
+                case NKLayoutMarginAttributeTop:
+                _relativeAttribute = NKLayoutMarginAttributeBottom;
+                break;
+                case NKLayoutMarginAttributeRight:
+                _relativeAttribute = NKLayoutMarginAttributeLeft;
+                break;
+                case NKLayoutMarginAttributeBottom:
+                _relativeAttribute = NKLayoutMarginAttributeTop;
+                break;
+
+            default:
+                _relativeAttribute = _margin.attribute;
+                break;
+        }
+        return;
     }
+    
+    NSAssert(NO, @"Alignment type error ...");
 }
 
 - (NKLayoutMarginAttribute)attrbuteWithMargin:(NKMargin *)margin {
