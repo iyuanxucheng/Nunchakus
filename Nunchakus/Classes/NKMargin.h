@@ -7,11 +7,12 @@
 
 #import <Foundation/Foundation.h>
 #import "NKLayoutEnum.h"
+#import "NKMacroConstant.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 
-@class NKMultiple, NKAlignment;
+@class NKMultiple, NKAlignment, NKRelative;
 
 @interface NKMargin : NSObject
 
@@ -29,17 +30,18 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NKMargin *height;
 @property (nonatomic, strong, readonly) NKMargin *centerX;
 @property (nonatomic, strong, readonly) NKMargin *centerY;
+@property (nonatomic, strong, readonly) NKMargin *edge;
+@property (nonatomic, strong, readonly) NKMargin *relativeMargin;
 
 @property (nonatomic, strong, readonly) NKAlignment *aligned;
-@property (nonatomic, strong, readonly) NKMultiple *multipleOfAttribute;
+@property (nonatomic, strong, readonly) NKMultiple *multiple;
+@property (nonatomic, strong, readonly) NKRelative *relative;
 
-@property (nonatomic, strong) NKMargin *(^stretch)(void);
-@property (nonatomic, strong) NKMargin *(^valueOf)(CGFloat offset);
-@property (nonatomic, strong) NKMargin *(^priorityOf)(NKLayoutAttributePriority priority);
-@property (nonatomic, strong) NKMargin *(^relativeTo)(id attribute);
-
-@property (nonatomic, strong) NKMultiple *(^multipleOf)(NKLayoutMarginAttribute attribute);
-
+@property (nonatomic, strong, readonly) NKMargin *(^stretch)(void);
+@property (nonatomic, strong, readonly) NKMargin *(^valueOf)(CGFloat);
+@property (nonatomic, strong, readonly) NKMargin *(^priorityOf)(NKLayoutAttributePriority);
+/// UIView or NKMargin
+@property (nonatomic, strong, readonly) NKMargin *(^relativeTo)(id);
 
 @property (nonatomic, strong) NKMargin *head;
 @property (nonatomic, strong) NKMargin *next;

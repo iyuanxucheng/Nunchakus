@@ -23,6 +23,11 @@
         NSLog(@"NKViewController: defer is ok");
     };
     NSLog(@"NKViewController: viewDidLoad exit");
+
+    self.view.nk_left.aligned.with(self.view.superview.nk_left).priorityOf(NKLayoutAttributePriorityHight);
+    self.view.nk_right.relativeTo(self.view.superview.nk_right).valueOf(20).priorityOf(1000);
+    self.view.nk_left.right.bottom.top.relativeTo(self.view.superview);
+    [self.view nk_make];
 }
 
 - (void)didReceiveMemoryWarning {

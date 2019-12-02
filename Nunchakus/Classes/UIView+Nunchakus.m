@@ -7,51 +7,54 @@
 
 #import "UIView+Nunchakus.h"
 #import <objc/runtime.h>
+#import "Nunchakus.h"
+
+@interface UIView ()
+
+@property (nonatomic, strong) NKLayout *nk_layout;
+
+@end
 
 @implementation UIView (Nunchakus)
 
-
-- (NKLayoutEdgeAttribute)layout_left {
-    return NKLayoutAlignmentLeft;
+- (void)nk_make {
+    [self.nk_layout make];
 }
 
-- (NKLayoutEdgeAttribute)layout_top {
-    return NKLayoutAlignmentTop;
+- (void)nk_makeLayout:(void (^)(NKLayout *))maker {
+    !maker ?: maker(self.nk_layout);
 }
 
-- (NKLayoutEdgeAttribute)layout_right {
-    return NKLayoutAlignmentRight;
+- (void)setNk_layout:(NKLayout *)nk_layout {
+    objc_setAssociatedObject(self, @selector(nk_layout), nk_layout, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-- (NKLayoutEdgeAttribute)layout_bottom {
-    return NKLayoutAlignmentBottom;
-}
+#pragma mark -- getter
 
-- (NKLayoutEdgeAttribute)layout_centerx {
-    return NKLayoutAlignmentCenterX;
-}
-
-- (NKLayoutEdgeAttribute)layout_centerY {
-    return NKLayoutAlignmentCenterY;
-}
-
-- (NKLayout *)layout_dog {
-    NKLayout *layout = objc_getAssociatedObject(self, @selector(layout_dog));
+- (NKLayout *)nk_layout {
+    NKLayout *layout = objc_getAssociatedObject(self, @selector(nk_layout));
     if (layout) return layout;
     //
     layout = [[NKLayout alloc] initWithContext:self];
 
-    [self setLayout_dog:layout];
-    
+    [self setNk_layout:layout];
+
+    defer {
+        NSLog(@"layout dog defer");
+    };
+
     return layout;
 }
 
-- (void)setLayout_dog:(NKLayout *)layout_dog {
-    objc_setAssociatedObject(self, @selector(layout_dog), layout_dog, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-}
 
-- (void)layout_make:(void (^)(NKLayout * _Nonnull))maker {
-    !maker ?: maker(self.layout_dog);
-}
+nk_layout_margin_getter(left);
+nk_layout_margin_getter(top);
+nk_layout_margin_getter(right);
+nk_layout_margin_getter(bottom);
+nk_layout_margin_getter(width);
+nk_layout_margin_getter(height);
+nk_layout_margin_getter(centerX);
+nk_layout_margin_getter(centerY);
+nk_layout_margin_getter(edge);
 
 @end

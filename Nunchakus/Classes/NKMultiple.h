@@ -7,19 +7,21 @@
 
 #import <Foundation/Foundation.h>
 #import "NKLayoutEnum.h"
+@class NKMargin;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NKMultiple : NSObject
 
 @property (nonatomic, assign, readonly) CGFloat valueOfRatio;
-@property (nonatomic, assign, readonly) NKLayoutMarginAttribute attribute;
-@property (nonatomic, assign, readonly) NKLayoutAttributePriority priorityOfAttribute;
+@property (nonatomic, assign, readonly) NKLayoutMarginAttribute multipleByAttribute;
 
-@property (nonatomic, strong) NKMultiple *(^valueOf)(CGFloat ratio);
-@property (nonatomic, strong) NKMultiple *(^priorityOf)(NKLayoutAttributePriority priority);
+@property (nonatomic, strong) NKMargin *(^ratioOf)(CGFloat ratio);
+/// UIView or NKMargin
+@property (nonatomic, strong) NKMultiple *(^by)(id);
 
-- (instancetype)initWithAttribute:(NKLayoutMarginAttribute)attribute;
+- (instancetype)initWithMargin:(NKMargin *)margin;
+
 
 @end
 

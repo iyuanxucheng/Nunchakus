@@ -7,13 +7,15 @@
 
 #import "NKAlignment.h"
 #import "NKMacroConstant.h"
-#import "NKLayoutEnum.h"
 #import "NKMargin.h"
 #import "UIView+Nunchakus.h"
 
+
+// to in on
+
 @interface NKAlignment ()
 
-@property (nonatomic, assign) NKLayoutEdgeAttribute edgeAttribute;
+@property (nonatomic, assign) NKLayoutEdgeAttribute alignmentAttribute;
 
 @property (nonatomic, weak) NKMargin *margin;
 
@@ -37,29 +39,36 @@
 }
 
 
-- (void (^)(id))with {
+- (NKMargin *(^)(id))with {
     return ^(id attr){
         [self calculateAttribute:attr];
+        return self.margin;
     };
 }
 
 - (void)calculateAttribute:(id)attr {
-    const char *type = @encode(__typeof__((attr)));
-    if (strcmp(type, @encode(unsigned long)) == 0) {
 
-        self.edgeAttribute = (NKLayoutEdgeAttribute)attr;
+    NKMargin *obj = attr;
+    _alignmentAttribute = NKLayoutAlignmentDefault;
 
-    } else if (strcmp(type, @encode(id)) == 0) {
-        UIView *obj = attr;
-        if ([obj isKindOfClass:UIView.class]) {
-            self.edgeAttribute = [self defaultAttrbute];
-        }
+    if ([obj isKindOfClass:NKMargin.class]) {
+
+        _alignmentAttribute = [self attrbuteWithMargin:obj];
+        return;
     }
+
+    if ([obj isKindOfClass:UIView.class]) {
+
+        _alignmentAttribute = [self attrbuteWithMargin:_margin];
+        return;
+    }
+
+    NSAssert(NO, @"Alignment type error ...");
 }
 
-- (NKLayoutEdgeAttribute)defaultAttrbute {
-    if (NKLayoutAttributeCenterY >= self.margin.attribute) {
-        return (NKLayoutEdgeAttribute)self.margin.attribute;
+- (NKLayoutEdgeAttribute)attrbuteWithMargin:(NKMargin *)margin {
+    if (NKLayoutMarginAttributeCenterY >= margin.attribute) {
+        return (NKLayoutEdgeAttribute)margin.attribute;
     }
     return NKLayoutAlignmentDefault;
 }

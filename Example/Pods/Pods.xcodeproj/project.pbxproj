@@ -18,6 +18,8 @@
 		3532618418A54EF776D2BB478084AE70 /* Nunchakus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E3B42649D3781FC0389D390552661E /* Nunchakus-dummy.m */; };
 		3E558F01D4231C2CF48402A1FAB5BC4B /* NKAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A65526569D1D5A764A03898DA1822E /* NKAlignment.m */; };
 		4F34E57A2394E81D00511635 /* Nunchakus.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F34E5792394E81D00511635 /* Nunchakus.m */; };
+		4F34E57D2395324900511635 /* NKRelative.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F34E57B2395324900511635 /* NKRelative.h */; };
+		4F34E57E2395324900511635 /* NKRelative.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F34E57C2395324900511635 /* NKRelative.m */; };
 		58586B53E9067C43AD036FF3F3251EED /* NKPadding.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BAA8F678D1AF5AC1EA13C2D05868A60 /* NKPadding.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		737F683740B152A741655989C3485A79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		7CEDDA996C059055528F906E5AAE07B2 /* Pods-Nunchakus_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58581C32831C2DB11CAEEC75C7207716 /* Pods-Nunchakus_Example-dummy.m */; };
@@ -68,6 +70,8 @@
 		42E3B42649D3781FC0389D390552661E /* Nunchakus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nunchakus-dummy.m"; sourceTree = "<group>"; };
 		4AAFAC7EFC9F00EFF564F875FFBFD38C /* UIView+Nunchakus.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Nunchakus.m"; path = "Nunchakus/Classes/UIView+Nunchakus.m"; sourceTree = "<group>"; };
 		4F34E5792394E81D00511635 /* Nunchakus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Nunchakus.m; path = Nunchakus/Classes/Nunchakus.m; sourceTree = "<group>"; };
+		4F34E57B2395324900511635 /* NKRelative.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NKRelative.h; path = Nunchakus/Classes/NKRelative.h; sourceTree = "<group>"; };
+		4F34E57C2395324900511635 /* NKRelative.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NKRelative.m; path = Nunchakus/Classes/NKRelative.m; sourceTree = "<group>"; };
 		5225E2741823DAD1D7D48D0439C33401 /* NKMacroConstant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKMacroConstant.h; path = Nunchakus/Classes/NKMacroConstant.h; sourceTree = "<group>"; };
 		5752A1D99FF042833241828B8F10BAC6 /* Pods-Nunchakus_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Nunchakus_Example-umbrella.h"; sourceTree = "<group>"; };
 		5814E591EE47DB31AF8AB831E2B168A5 /* Pods-Nunchakus_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Nunchakus_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 			children = (
 				AB870000628DC6E3FF8C7416F794CC81 /* NKAlignment.h */,
 				32A65526569D1D5A764A03898DA1822E /* NKAlignment.m */,
+				4F34E57B2395324900511635 /* NKRelative.h */,
+				4F34E57C2395324900511635 /* NKRelative.m */,
 				99A6E2036575A37D026634C069DCCE2D /* NKLayout.h */,
 				70A6C5CAAFA3E8D7884EEBA376A0250B /* NKLayout.m */,
 				79E0A04D1043CD05BBCF2C84CDE73DD9 /* NKLayoutEnum.h */,
@@ -287,6 +293,7 @@
 				FA63B7BCCDA3A3948F1AB38FCB0D49EC /* NKMacroConstant.h in Headers */,
 				EE0DECD2DE07931F2937312A7F613EC6 /* NKMargin.h in Headers */,
 				8FD5BC1C556FA6EDC4C178F253878473 /* NKMultiple.h in Headers */,
+				4F34E57D2395324900511635 /* NKRelative.h in Headers */,
 				58586B53E9067C43AD036FF3F3251EED /* NKPadding.h in Headers */,
 				03E73BC1C623DEE09D65F3949E734E86 /* Nunchakus-umbrella.h in Headers */,
 				160118B4004BAA7C1918C505CE46907B /* Nunchakus.h in Headers */,
@@ -420,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E558F01D4231C2CF48402A1FAB5BC4B /* NKAlignment.m in Sources */,
+				4F34E57E2395324900511635 /* NKRelative.m in Sources */,
 				2644089CCCCBF4E21AEDCF1726F5AA87 /* NKLayout.m in Sources */,
 				E08E8D91C14442E83C1A303BE8A2280D /* NKMargin.m in Sources */,
 				CB6D900406281D2537EC763D6F9D8C86 /* NKMultiple.m in Sources */,

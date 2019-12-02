@@ -7,12 +7,14 @@
 
 #import "NKMultiple.h"
 #import "NKMacroConstant.h"
+#import "NKMargin.h"
 
 @interface NKMultiple ()
 
 @property (nonatomic, assign) CGFloat valueOfRatio;
-@property (nonatomic, assign) NKLayoutMarginAttribute attribute;
-@property (nonatomic, assign) NKLayoutAttributePriority priorityOfAttribute;
+@property (nonatomic, assign) NKLayoutMarginAttribute multipleByAttribute;
+
+@property (nonatomic, weak) NKMargin *margin;
 
 @end
 
@@ -24,28 +26,45 @@
 }
 #endif
 
-- (instancetype)initWithAttribute:(NKLayoutMarginAttribute)attribute {
+- (instancetype)initWithMargin:(NKMargin *)margin {
     self = [super init];
     if (self) {
-        _attribute = attribute;
+        _margin = margin;
     }
     return self;
 }
 
-- (NKMultiple *(^)(CGFloat))valueOf {
+- (NKMargin *(^)(CGFloat))ratioOf {
     return ^(CGFloat value) {
         self.valueOfRatio = value;
+        return self.margin;
+    };
+}
+
+- (NKMultiple * (^)(id))by {
+    return ^(id attr) {
+
+        NKMargin *obj = attr;
+        self.multipleByAttribute = NKLayoutMarginAttributeDefault;
+
+        if ([obj isKindOfClass:NKMargin.class]) {
+            self.multipleByAttribute = [self attrbuteWithMargin:obj];
+            return self;
+        }
+        if ([obj isKindOfClass:UIView.class]) {
+            self.multipleByAttribute = [self attrbuteWithMargin:self.margin];
+            return self;
+        }
+        NSAssert(NO, @"Alignment type error ...");
         return self;
     };
 }
 
-- (NKMultiple *(^)(NKLayoutAttributePriority))priorityOf {
-    return ^(NKLayoutAttributePriority priority) {
-        self.priorityOfAttribute = priority;
-        return self;
-    };
+- (NKLayoutMarginAttribute)attrbuteWithMargin:(NKMargin *)margin {
+    if (NKLayoutMarginAttributeCenterY >= margin.attribute) {
+        return margin.attribute;
+    }
+    return NKLayoutMarginAttributeDefault;
 }
-
-
 
 @end

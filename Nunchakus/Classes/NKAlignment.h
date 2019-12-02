@@ -6,13 +6,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NKLayoutEnum.h"
+
 @class NKMargin;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NKAlignment : NSObject
 
-@property (nonatomic, strong) void (^with)(id attr);
+@property (nonatomic, assign, readonly) NKLayoutEdgeAttribute alignmentAttribute;
+
+/// UIView or NKMargin
+@property (nonatomic, strong, readonly) NKMargin *(^with)(id attr);
 
 - (instancetype)initWithMargin:(NKMargin *)margin;
 

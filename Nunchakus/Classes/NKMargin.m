@@ -9,6 +9,7 @@
 #import "NKMultiple.h"
 #import "NKLayoutEnum.h"
 #import "NKMacroConstant.h"
+#import "NKAlignment.h"
 
 @interface NKMargin ()
 
@@ -17,10 +18,20 @@
 @property (nonatomic, assign) NKLayoutMarginAttribute attribute;
 @property (nonatomic, assign) NKLayoutAttributePriority priorityOfAttribute;
 
-@property (nonatomic, strong) NKMultiple *multipleOfAttribute;
+@property (nonatomic, strong) NKMargin *left;
+@property (nonatomic, strong) NKMargin *top;
+@property (nonatomic, strong) NKMargin *right;
+@property (nonatomic, strong) NKMargin *bottom;
+@property (nonatomic, strong) NKMargin *width;
+@property (nonatomic, strong) NKMargin *height;
+@property (nonatomic, strong) NKMargin *centerX;
+@property (nonatomic, strong) NKMargin *centerY;
+@property (nonatomic, strong) NKMargin *edge;
+@property (nonatomic, strong) NKMargin *relativeMargin;
 
+@property (nonatomic, strong) NKAlignment *aligned;
+@property (nonatomic, strong) NKMultiple *multiple;
 
-@property (nonatomic, strong) id attrValue;
 @end
 
 @implementation NKMargin
@@ -65,19 +76,33 @@
     };
 }
 
-- (NKMargin * (^)(id))relativeTo{
+- (NKMargin * (^)(id))relativeTo {
     return ^(id attr){
-        self.attrValue = attr;
+        self.relativeMargin = attr;
         return self;
     };
 }
 
-- (NKMultiple *(^)(NKLayoutMarginAttribute))multipleOf {
-    return ^(NKLayoutMarginAttribute attribute) {
-        NKMultiple *m = [[NKMultiple alloc] initWithAttribute:attribute];
-        self.multipleOfAttribute = m;
-        return m;
-    };
+- (NKMultiple *)multiple {
+    if (_multiple) return _multiple;
+    _multiple = [[NKMultiple alloc] initWithMargin:self];
+    return _multiple;
 }
+
+- (NKAlignment *)aligned {
+    if (_aligned) return _aligned;
+    _aligned = [[NKAlignment alloc] initWithMargin:self];
+    return _aligned;
+}
+
+nk_margin_getter(left, NKLayoutMarginAttributeLeft);
+nk_margin_getter(top, NKLayoutMarginAttributeTop);
+nk_margin_getter(right, NKLayoutMarginAttributeRight);
+nk_margin_getter(bottom, NKLayoutMarginAttributeBottom);
+nk_margin_getter(width, NKLayoutMarginAttributeWidth);
+nk_margin_getter(height, NKLayoutMarginAttributeHeight);
+nk_margin_getter(centerX, NKLayoutMarginAttributeCenterX);
+nk_margin_getter(centerY, NKLayoutMarginAttributeCenterY);
+nk_margin_getter(edge, NKLayoutMarginAttributeEdge);
 
 @end
