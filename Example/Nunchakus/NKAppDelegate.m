@@ -7,11 +7,15 @@
 //
 
 #import "NKAppDelegate.h"
+#import <Nunchakus/Nunchakus.h>
 
 @implementation NKAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    defer {
+        NSLog(@"AppDelegate: defer is ok");
+    };
     return YES;
 }
 

@@ -11,7 +11,7 @@
 @interface NKMultiple ()
 
 @property (nonatomic, assign) CGFloat valueOfRatio;
-@property (nonatomic, assign) NKLayoutAttribute attribute;
+@property (nonatomic, assign) NKLayoutMarginAttribute attribute;
 @property (nonatomic, assign) NKLayoutAttributePriority priorityOfAttribute;
 
 @end
@@ -24,7 +24,7 @@
 }
 #endif
 
-- (instancetype)initWithAttribute:(NKLayoutAttribute)attribute {
+- (instancetype)initWithAttribute:(NKLayoutMarginAttribute)attribute {
     self = [super init];
     if (self) {
         _attribute = attribute;

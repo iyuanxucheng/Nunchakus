@@ -9,3 +9,16 @@
 #import "NKMultiple.h"
 
 #import "UIView+Nunchakus.h"
+
+
+
+
+#if defined(__cplusplus)
+extern "C" {
+#endif
+
+void nk_executeDeferBlock (__strong nk_deferBlock *block);
+
+#if defined(__cplusplus)
+}
+#endif

@@ -7,6 +7,7 @@
 //
 
 #import "NKViewController.h"
+#import <Nunchakus/Nunchakus.h>
 
 @interface NKViewController ()
 
@@ -17,6 +18,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+
+    defer {
+        NSLog(@"NKViewController: defer is ok");
+    };
+    NSLog(@"NKViewController: viewDidLoad exit");
 }
 
 - (void)didReceiveMemoryWarning {

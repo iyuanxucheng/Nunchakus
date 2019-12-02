@@ -14,7 +14,7 @@
 
 @property (nonatomic, assign) BOOL isStretched;
 @property (nonatomic, assign) CGFloat valueOfOffset;
-@property (nonatomic, assign) NKLayoutAttribute attribute;
+@property (nonatomic, assign) NKLayoutMarginAttribute attribute;
 @property (nonatomic, assign) NKLayoutAttributePriority priorityOfAttribute;
 
 @property (nonatomic, strong) NKMultiple *multipleOfAttribute;
@@ -36,7 +36,7 @@
     return _attribute << 16 ^ NSUIntegerMax;
 }
 
-- (instancetype)initWithAttribute:(NKLayoutAttribute)attribute {
+- (instancetype)initWithAttribute:(NKLayoutMarginAttribute)attribute {
     if (self) {
         _attribute = attribute;
         _priorityOfAttribute = NKLayoutAttributePriorityDefault;
@@ -72,8 +72,8 @@
     };
 }
 
-- (NKMultiple *(^)(NKLayoutAttribute))multipleOf {
-    return ^(NKLayoutAttribute attribute) {
+- (NKMultiple *(^)(NKLayoutMarginAttribute))multipleOf {
+    return ^(NKLayoutMarginAttribute attribute) {
         NKMultiple *m = [[NKMultiple alloc] initWithAttribute:attribute];
         self.multipleOfAttribute = m;
         return m;

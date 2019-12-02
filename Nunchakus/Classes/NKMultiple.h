@@ -13,13 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NKMultiple : NSObject
 
 @property (nonatomic, assign, readonly) CGFloat valueOfRatio;
-@property (nonatomic, assign, readonly) NKLayoutAttribute attribute;
+@property (nonatomic, assign, readonly) NKLayoutMarginAttribute attribute;
 @property (nonatomic, assign, readonly) NKLayoutAttributePriority priorityOfAttribute;
 
 @property (nonatomic, strong) NKMultiple *(^valueOf)(CGFloat ratio);
 @property (nonatomic, strong) NKMultiple *(^priorityOf)(NKLayoutAttributePriority priority);
 
-- (instancetype)initWithAttribute:(NKLayoutAttribute)attribute;
+- (instancetype)initWithAttribute:(NKLayoutMarginAttribute)attribute;
 
 @end
 

@@ -79,6 +79,16 @@
 #define RandomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1]
 #define RandomData [NSString stringWithFormat:@"随机数据---%d", arc4random_uniform(1000000)]
 
+
+
+
+#define nk_concat(A, B) A ## B
+
+typedef void (^nk_deferBlock)(void);
+
+#define defer  __strong nk_deferBlock nk_concat(nk_deferBlock_, __LINE__) __attribute__((cleanup(nk_executeDeferBlock), unused)) = ^
+
+
 typedef struct __attribute__((objc_boxable)) CGPoint CGPoint;
 typedef struct __attribute__((objc_boxable)) CGSize CGSize;
 typedef struct __attribute__((objc_boxable)) CGRect CGRect;

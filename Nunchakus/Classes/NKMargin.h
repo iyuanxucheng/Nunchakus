@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// 是否是弹性的 自动适配屏幕宽度
 @property (nonatomic, assign, readonly) BOOL isStretched;
 @property (nonatomic, assign, readonly) CGFloat valueOfOffset;
-@property (nonatomic, assign, readonly) NKLayoutAttribute attribute;
+@property (nonatomic, assign, readonly) NKLayoutMarginAttribute attribute;
 @property (nonatomic, assign, readonly) NKLayoutAttributePriority priorityOfAttribute;
 
 @property (nonatomic, strong, readonly) NKMargin *left;
@@ -38,13 +38,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NKMargin *(^priorityOf)(NKLayoutAttributePriority priority);
 @property (nonatomic, strong) NKMargin *(^relativeTo)(id attribute);
 
-@property (nonatomic, strong) NKMultiple *(^multipleOf)(NKLayoutAttribute attribute);
+@property (nonatomic, strong) NKMultiple *(^multipleOf)(NKLayoutMarginAttribute attribute);
 
 
 @property (nonatomic, strong) NKMargin *head;
 @property (nonatomic, strong) NKMargin *next;
 
-- (instancetype)initWithAttribute:(NKLayoutAttribute)attribute;
+- (instancetype)initWithAttribute:(NKLayoutMarginAttribute)attribute;
 
 @end
 

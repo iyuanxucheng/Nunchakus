@@ -10,6 +10,31 @@
 
 @implementation UIView (Nunchakus)
 
+
+- (NKLayoutEdgeAttribute)layout_left {
+    return NKLayoutAlignmentLeft;
+}
+
+- (NKLayoutEdgeAttribute)layout_top {
+    return NKLayoutAlignmentTop;
+}
+
+- (NKLayoutEdgeAttribute)layout_right {
+    return NKLayoutAlignmentRight;
+}
+
+- (NKLayoutEdgeAttribute)layout_bottom {
+    return NKLayoutAlignmentBottom;
+}
+
+- (NKLayoutEdgeAttribute)layout_centerx {
+    return NKLayoutAlignmentCenterX;
+}
+
+- (NKLayoutEdgeAttribute)layout_centerY {
+    return NKLayoutAlignmentCenterY;
+}
+
 - (NKLayout *)layout_dog {
     NKLayout *layout = objc_getAssociatedObject(self, @selector(layout_dog));
     if (layout) return layout;
