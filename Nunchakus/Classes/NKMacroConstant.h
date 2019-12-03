@@ -79,6 +79,42 @@
 #define RandomColor [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1]
 #define RandomData [NSString stringWithFormat:@"随机数据---%d", arc4random_uniform(1000000)]
 
+
+
+
+#define nk_concat(A, B) A ## B
+
+typedef void (^nk_deferBlock)(void);
+
+#define defer  __strong nk_deferBlock nk_concat(nk_deferBlock_, __LINE__) __attribute__((cleanup(nk_executeDeferBlock), unused)) = ^
+
+
+// proprty
+
+#define nk_property_margin(property_name) \
+@property (nonatomic, strong) NKMargin *##property_name;
+
+#define nk_property_margin_readonly(property_name) \
+@property (nonatomic, strong, readonly) NKMargin *##property_name;
+
+
+
+// -- getter --
+
+#define nk_margin_concat(margin_name) _##margin_name
+#define nk_margin_getter(margin_name, margin_enum) \
+- (NKMargin *)margin_name { \
+if (nk_margin_concat(margin_name)) return nk_margin_concat(margin_name); \
+    nk_margin_concat(margin_name) = [[NKMargin alloc] initWithAttribute:margin_enum]; \
+    return nk_margin_concat(margin_name); \
+}
+
+#define nk_layout_margin_getter(margin_name) \
+- (NKMargin *)nk_##margin_name { \
+    return self.nk_layout.margin_name; \
+}
+
+
 typedef struct __attribute__((objc_boxable)) CGPoint CGPoint;
 typedef struct __attribute__((objc_boxable)) CGSize CGSize;
 typedef struct __attribute__((objc_boxable)) CGRect CGRect;

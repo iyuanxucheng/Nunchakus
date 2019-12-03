@@ -6,26 +6,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NKLayoutEnum.h"
+
+@class NKMargin;
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef NS_ENUM(NSUInteger, NKLayoutAlignmentMode) {
-    NKLayoutAlignmentLeft       = 0,
-    NKLayoutAlignmentTop        = 1,
-    NKLayoutAlignmentRight      = 2,
-    NKLayoutAlignmentBottom     = 3,
-    NKLayoutAlignmentCenter     = 4,
-};
-
 @interface NKAlignment : NSObject
 
-@property (nonatomic, strong) NKAlignment *left;
-@property (nonatomic, strong) NKAlignment *top;
-@property (nonatomic, strong) NKAlignment *right;
-@property (nonatomic, strong) NKAlignment *bottom;
+@property (nonatomic, assign, readonly) NKLayoutEdgeAttribute alignmentAttribute;
 
-@property (nonatomic, strong) void (^with)(id attr);
+/// UIView or NKMargin
+@property (nonatomic, strong, readonly) NKMargin *(^with)(id attr);
 
+- (instancetype)initWithMargin:(NKMargin *)margin;
 
 @end
 

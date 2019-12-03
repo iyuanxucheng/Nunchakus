@@ -8,29 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		01D7BBD463B4A32CBD70E11ADB6AB8DD /* Pods-Nunchakus_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED4BCCB3CCE4E56B1B1B565A64C87F41 /* Pods-Nunchakus_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		03E73BC1C623DEE09D65F3949E734E86 /* Nunchakus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DC2A68F7CB3DEF04D9781A643B506F7 /* Nunchakus-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C171F6F9417064041CACF889D992CCD /* UIView+Nunchakus.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFAC7EFC9F00EFF564F875FFBFD38C /* UIView+Nunchakus.m */; };
-		160118B4004BAA7C1918C505CE46907B /* Nunchakus.h in Headers */ = {isa = PBXBuildFile; fileRef = 5FCB47CD159BA0619EAD17F97F49AF87 /* Nunchakus.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D68CD558BFE755E715211AAA3820DC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		046A6A626B831C1BE3718DF6273C32F4 /* NKLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 66CCBCAE6EDCCEB01B304D51EE4B662A /* NKLayout.m */; };
+		0C8A9B1CFDEBE930C617FF6FE52B5A0E /* NKPadding.h in Headers */ = {isa = PBXBuildFile; fileRef = 62BA596F0CE94FD5F9C2EF8CEBA0F9FD /* NKPadding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D0AAD466A26B6ED0C7C0AB91DCBCED0 /* NKMacroConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 89D7BE11C21086CF832733591ECDC7FE /* NKMacroConstant.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E10B366C57BE32FF3E7D0526E278A58 /* NKRelative.h in Headers */ = {isa = PBXBuildFile; fileRef = 37F88D2D5FD68E8FD7D916DD49E77E78 /* NKRelative.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11FC44AA549D6361E14DA9E9B62307D0 /* NKAlignment.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E8BA33DBCA496E990D45797596F6F52 /* NKAlignment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		122BA51EF497C093685BAA4138CE49D5 /* UIView+Nunchakus.m in Sources */ = {isa = PBXBuildFile; fileRef = 527D9437EC840E79366D1843ADCC383F /* UIView+Nunchakus.m */; };
 		1DDA46ACCD53ADC14A4E2CE9E02CF2C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		2644089CCCCBF4E21AEDCF1726F5AA87 /* NKLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A6C5CAAFA3E8D7884EEBA376A0250B /* NKLayout.m */; };
-		308CE41FC1A3DE239DE8ACBA2FC7F05F /* NKPadding.m in Sources */ = {isa = PBXBuildFile; fileRef = 2689AB38FCE36650DE240179A20575BB /* NKPadding.m */; };
-		3532618418A54EF776D2BB478084AE70 /* Nunchakus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 42E3B42649D3781FC0389D390552661E /* Nunchakus-dummy.m */; };
-		3E558F01D4231C2CF48402A1FAB5BC4B /* NKAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 32A65526569D1D5A764A03898DA1822E /* NKAlignment.m */; };
-		58586B53E9067C43AD036FF3F3251EED /* NKPadding.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BAA8F678D1AF5AC1EA13C2D05868A60 /* NKPadding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29C58AE4C7E0FF78520FF11FA49CE9E2 /* UIView+Nunchakus.h in Headers */ = {isa = PBXBuildFile; fileRef = 755315FFB516A5C49CA65FE62DA23473 /* UIView+Nunchakus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		32CB26A899834B7506AABB4541605BCF /* Nunchakus.h in Headers */ = {isa = PBXBuildFile; fileRef = D837BF22E9E4A3F6D0B12939A9344692 /* Nunchakus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		334585AA676E0B73D5093E67E668105B /* NKRelative.m in Sources */ = {isa = PBXBuildFile; fileRef = 491965B96D6970D6910EFDE5F9E1D8AC /* NKRelative.m */; };
+		37DBE48E431585A50259C272DF90783D /* NKAlignment.m in Sources */ = {isa = PBXBuildFile; fileRef = F742F874B43BA356D74F77713678F530 /* NKAlignment.m */; };
+		3A1084014A421D7E2757991E78E561BD /* Nunchakus-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D99DC2D762C720541D75EF87DC2E39C7 /* Nunchakus-dummy.m */; };
+		5966432EA53BF842174C11DCE4D59C11 /* NKLayoutEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = B372700F199D1741C79C16BAFD5B9963 /* NKLayoutEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B4908F7A10B71E6C611B7C132C6F945 /* NKLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = A738D45AC796801C6834EE3A17F57EF0 /* NKLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		737F683740B152A741655989C3485A79 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		7619EF9F272F641DA4B57E52C8DD6D26 /* NKMultiple.h in Headers */ = {isa = PBXBuildFile; fileRef = 4237472870F735570FDEE14FE16DF0D6 /* NKMultiple.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7CEDDA996C059055528F906E5AAE07B2 /* Pods-Nunchakus_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58581C32831C2DB11CAEEC75C7207716 /* Pods-Nunchakus_Example-dummy.m */; };
-		8505C97AD0471E970AF9986E70C6C128 /* NKLayoutEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = 79E0A04D1043CD05BBCF2C84CDE73DD9 /* NKLayoutEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8C7BF5266A31FDCAD76FD1B2B9103EE4 /* UIView+Nunchakus.h in Headers */ = {isa = PBXBuildFile; fileRef = B12FD4E5ECB8C8CF87B452AA16A1FDC0 /* UIView+Nunchakus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7DD62527BE5379B4FAE3252B8E293D77 /* NKMargin.m in Sources */ = {isa = PBXBuildFile; fileRef = 87A757026D89565F54E5FD79148626F1 /* NKMargin.m */; };
+		8B685EA0239556820004E301 /* NKOrigin.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B685E9E239556820004E301 /* NKOrigin.h */; };
+		8B685EA1239556820004E301 /* NKOrigin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B685E9F239556820004E301 /* NKOrigin.m */; };
+		8B685EA4239556920004E301 /* NKSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B685EA2239556920004E301 /* NKSize.h */; };
+		8B685EA5239556920004E301 /* NKSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B685EA3239556920004E301 /* NKSize.m */; };
 		8EFA2E4D05A92B0CBD1C8B353477A5DC /* Pods-Nunchakus_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E49E4C7F63F0CBE5FE8932A33656B7 /* Pods-Nunchakus_Tests-dummy.m */; };
-		8FD5BC1C556FA6EDC4C178F253878473 /* NKMultiple.h in Headers */ = {isa = PBXBuildFile; fileRef = 71FB26C6084E6AEF4D78D2631A383F3E /* NKMultiple.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		90FE6E227D4D40718B2905A2D723527C /* Nunchakus.m in Sources */ = {isa = PBXBuildFile; fileRef = 84E06D50E3A9BF0A42E7FAD4E2649F3F /* Nunchakus.m */; };
 		97EEA78E07407EF041A6B42024B8FEFE /* Pods-Nunchakus_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5752A1D99FF042833241828B8F10BAC6 /* Pods-Nunchakus_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C61C6AE7161C2D79922ABC2D6E7CF648 /* NKLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A6E2036575A37D026634C069DCCE2D /* NKLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB6D900406281D2537EC763D6F9D8C86 /* NKMultiple.m in Sources */ = {isa = PBXBuildFile; fileRef = 387F4BA4FC7FF9B9CAD6F3B5C440E48A /* NKMultiple.m */; };
-		DEE90B5E5FC63AF05BF49232C21EAF6F /* NKAlignment.h in Headers */ = {isa = PBXBuildFile; fileRef = AB870000628DC6E3FF8C7416F794CC81 /* NKAlignment.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E08E8D91C14442E83C1A303BE8A2280D /* NKMargin.m in Sources */ = {isa = PBXBuildFile; fileRef = EF8A0D9EEDC838CAFA66DF700383D451 /* NKMargin.m */; };
-		EE0DECD2DE07931F2937312A7F613EC6 /* NKMargin.h in Headers */ = {isa = PBXBuildFile; fileRef = 99A68A221667A0A36A3EF54C1B9BDC52 /* NKMargin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FA63B7BCCDA3A3948F1AB38FCB0D49EC /* NKMacroConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 5225E2741823DAD1D7D48D0439C33401 /* NKMacroConstant.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9ADB03950D06397B1CEE8A0FBBBAF592 /* NKPadding.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A3923E7A14A899E2DF9673631BCA854 /* NKPadding.m */; };
+		BE3AC8A99AFF7B06D7B2DA3C95780BF1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		C6F27F00AFF9AF3A010419649655864F /* Nunchakus-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F8959BD3C9853948D6F634C54B827829 /* Nunchakus-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E1490A3D8730357DD40324E96CA680DC /* NKMultiple.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D563E740F6724D31006836690E9B97 /* NKMultiple.m */; };
+		EE0E886EFDE59446DD161A71D5234A27 /* NKMargin.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D5F41508E9DB316877723D29EAD97F4 /* NKMargin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,51 +59,58 @@
 
 /* Begin PBXFileReference section */
 		0036BB47DFCF9690FCD71217EBF8F8E3 /* Pods-Nunchakus_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Nunchakus_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		04850FD20EC1D018F12FCF4979F40310 /* Pods_Nunchakus_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Nunchakus_Tests.framework; path = "Pods-Nunchakus_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		145294F5A8552593AE84F5FBAC769DF0 /* Nunchakus.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = Nunchakus.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		16A538A92295889FE358B5E706CEA13B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		1BAA8F678D1AF5AC1EA13C2D05868A60 /* NKPadding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKPadding.h; path = Nunchakus/Classes/NKPadding.h; sourceTree = "<group>"; };
+		04850FD20EC1D018F12FCF4979F40310 /* Pods_Nunchakus_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nunchakus_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D5F41508E9DB316877723D29EAD97F4 /* NKMargin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKMargin.h; path = Nunchakus/Classes/NKMargin.h; sourceTree = "<group>"; };
+		1E8BA33DBCA496E990D45797596F6F52 /* NKAlignment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKAlignment.h; path = Nunchakus/Classes/NKAlignment.h; sourceTree = "<group>"; };
 		1ED453BD544E0F0023CBEFD94CDA8BD9 /* Pods-Nunchakus_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Nunchakus_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		2689AB38FCE36650DE240179A20575BB /* NKPadding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NKPadding.m; path = Nunchakus/Classes/NKPadding.m; sourceTree = "<group>"; };
+		2A3923E7A14A899E2DF9673631BCA854 /* NKPadding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NKPadding.m; path = Nunchakus/Classes/NKPadding.m; sourceTree = "<group>"; };
 		2A98163D040909FB25615F15C9DE3782 /* Pods-Nunchakus_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Nunchakus_Tests-Info.plist"; sourceTree = "<group>"; };
+		31D563E740F6724D31006836690E9B97 /* NKMultiple.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NKMultiple.m; path = Nunchakus/Classes/NKMultiple.m; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		32A65526569D1D5A764A03898DA1822E /* NKAlignment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NKAlignment.m; path = Nunchakus/Classes/NKAlignment.m; sourceTree = "<group>"; };
-		3709675A2F71349B4F44C9FDBC848B2A /* Pods_Nunchakus_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Nunchakus_Example.framework; path = "Pods-Nunchakus_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		387F4BA4FC7FF9B9CAD6F3B5C440E48A /* NKMultiple.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NKMultiple.m; path = Nunchakus/Classes/NKMultiple.m; sourceTree = "<group>"; };
-		405F15D5F7D20F65CD31606E9ADB8500 /* Nunchakus-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Nunchakus-Info.plist"; sourceTree = "<group>"; };
-		42E3B42649D3781FC0389D390552661E /* Nunchakus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nunchakus-dummy.m"; sourceTree = "<group>"; };
-		4AAFAC7EFC9F00EFF564F875FFBFD38C /* UIView+Nunchakus.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Nunchakus.m"; path = "Nunchakus/Classes/UIView+Nunchakus.m"; sourceTree = "<group>"; };
-		5225E2741823DAD1D7D48D0439C33401 /* NKMacroConstant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKMacroConstant.h; path = Nunchakus/Classes/NKMacroConstant.h; sourceTree = "<group>"; };
+		3709675A2F71349B4F44C9FDBC848B2A /* Pods_Nunchakus_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nunchakus_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F88D2D5FD68E8FD7D916DD49E77E78 /* NKRelative.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKRelative.h; path = Nunchakus/Classes/NKRelative.h; sourceTree = "<group>"; };
+		403D2608920C0CD8F0DA6EB481B3B9DD /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4237472870F735570FDEE14FE16DF0D6 /* NKMultiple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKMultiple.h; path = Nunchakus/Classes/NKMultiple.h; sourceTree = "<group>"; };
+		491965B96D6970D6910EFDE5F9E1D8AC /* NKRelative.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NKRelative.m; path = Nunchakus/Classes/NKRelative.m; sourceTree = "<group>"; };
+		4C048AD67095A789E1F14E37BDB0A8B0 /* Nunchakus.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = Nunchakus.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		527D9437EC840E79366D1843ADCC383F /* UIView+Nunchakus.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Nunchakus.m"; path = "Nunchakus/Classes/UIView+Nunchakus.m"; sourceTree = "<group>"; };
 		5752A1D99FF042833241828B8F10BAC6 /* Pods-Nunchakus_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Nunchakus_Example-umbrella.h"; sourceTree = "<group>"; };
 		5814E591EE47DB31AF8AB831E2B168A5 /* Pods-Nunchakus_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Nunchakus_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		58581C32831C2DB11CAEEC75C7207716 /* Pods-Nunchakus_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Nunchakus_Example-dummy.m"; sourceTree = "<group>"; };
-		5DC2A68F7CB3DEF04D9781A643B506F7 /* Nunchakus-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nunchakus-umbrella.h"; sourceTree = "<group>"; };
-		5FCB47CD159BA0619EAD17F97F49AF87 /* Nunchakus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nunchakus.h; path = Nunchakus/Classes/Nunchakus.h; sourceTree = "<group>"; };
+		62BA596F0CE94FD5F9C2EF8CEBA0F9FD /* NKPadding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKPadding.h; path = Nunchakus/Classes/NKPadding.h; sourceTree = "<group>"; };
 		62E49E4C7F63F0CBE5FE8932A33656B7 /* Pods-Nunchakus_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Nunchakus_Tests-dummy.m"; sourceTree = "<group>"; };
+		66CCBCAE6EDCCEB01B304D51EE4B662A /* NKLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NKLayout.m; path = Nunchakus/Classes/NKLayout.m; sourceTree = "<group>"; };
 		6857735B5FFA67810B6469318AB660ED /* Pods-Nunchakus_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Nunchakus_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		70A6C5CAAFA3E8D7884EEBA376A0250B /* NKLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NKLayout.m; path = Nunchakus/Classes/NKLayout.m; sourceTree = "<group>"; };
-		71FB26C6084E6AEF4D78D2631A383F3E /* NKMultiple.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKMultiple.h; path = Nunchakus/Classes/NKMultiple.h; sourceTree = "<group>"; };
-		79E0A04D1043CD05BBCF2C84CDE73DD9 /* NKLayoutEnum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKLayoutEnum.h; path = Nunchakus/Classes/NKLayoutEnum.h; sourceTree = "<group>"; };
+		755315FFB516A5C49CA65FE62DA23473 /* UIView+Nunchakus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Nunchakus.h"; path = "Nunchakus/Classes/UIView+Nunchakus.h"; sourceTree = "<group>"; };
+		7B2B8F05828A6EC96DA936FFB379EABF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7CA8FFD43A5EE66D1F48D17FAF421816 /* Pods-Nunchakus_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Nunchakus_Example.modulemap"; sourceTree = "<group>"; };
-		99A68A221667A0A36A3EF54C1B9BDC52 /* NKMargin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKMargin.h; path = Nunchakus/Classes/NKMargin.h; sourceTree = "<group>"; };
-		99A6E2036575A37D026634C069DCCE2D /* NKLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKLayout.h; path = Nunchakus/Classes/NKLayout.h; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AB870000628DC6E3FF8C7416F794CC81 /* NKAlignment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKAlignment.h; path = Nunchakus/Classes/NKAlignment.h; sourceTree = "<group>"; };
+		84E06D50E3A9BF0A42E7FAD4E2649F3F /* Nunchakus.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Nunchakus.m; path = Nunchakus/Classes/Nunchakus.m; sourceTree = "<group>"; };
+		87A757026D89565F54E5FD79148626F1 /* NKMargin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NKMargin.m; path = Nunchakus/Classes/NKMargin.m; sourceTree = "<group>"; };
+		895D93EDADE4665245B06C0253FB12DA /* Nunchakus-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Nunchakus-Info.plist"; sourceTree = "<group>"; };
+		89D7BE11C21086CF832733591ECDC7FE /* NKMacroConstant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKMacroConstant.h; path = Nunchakus/Classes/NKMacroConstant.h; sourceTree = "<group>"; };
+		8B685E9E239556820004E301 /* NKOrigin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NKOrigin.h; path = Nunchakus/Classes/NKOrigin.h; sourceTree = "<group>"; };
+		8B685E9F239556820004E301 /* NKOrigin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NKOrigin.m; path = Nunchakus/Classes/NKOrigin.m; sourceTree = "<group>"; };
+		8B685EA2239556920004E301 /* NKSize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NKSize.h; path = Nunchakus/Classes/NKSize.h; sourceTree = "<group>"; };
+		8B685EA3239556920004E301 /* NKSize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NKSize.m; path = Nunchakus/Classes/NKSize.m; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A738D45AC796801C6834EE3A17F57EF0 /* NKLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKLayout.h; path = Nunchakus/Classes/NKLayout.h; sourceTree = "<group>"; };
 		AD8B0EEF4766E328B7147D1A7D499891 /* Pods-Nunchakus_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Nunchakus_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE5EC5B5B4EBA5CF510D1C5FC639044B /* Nunchakus.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nunchakus.xcconfig; sourceTree = "<group>"; };
 		AF827890A21C69FB2C007349FFDD9268 /* Pods-Nunchakus_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Nunchakus_Example-frameworks.sh"; sourceTree = "<group>"; };
-		B12FD4E5ECB8C8CF87B452AA16A1FDC0 /* UIView+Nunchakus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Nunchakus.h"; path = "Nunchakus/Classes/UIView+Nunchakus.h"; sourceTree = "<group>"; };
-		B1C097FFFFBD4C27E5342969FA4F2055 /* Nunchakus.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Nunchakus.xcconfig; sourceTree = "<group>"; };
+		B372700F199D1741C79C16BAFD5B9963 /* NKLayoutEnum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NKLayoutEnum.h; path = Nunchakus/Classes/NKLayoutEnum.h; sourceTree = "<group>"; };
 		B55AF88D15C50A5D0C04FC9F9DD6AAE3 /* Pods-Nunchakus_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Nunchakus_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C6CCF987AC9B1A32B2F6A966319C4B6A /* Nunchakus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Nunchakus.modulemap; sourceTree = "<group>"; };
 		C76DB115A5D2D132F0F8AD9390EBB2DC /* Pods-Nunchakus_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Nunchakus_Example-Info.plist"; sourceTree = "<group>"; };
-		D11DA84366199B2F61E80BA308B55FDA /* Nunchakus.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Nunchakus.modulemap; sourceTree = "<group>"; };
-		D5D49F72B714AD34E1492BBD75FA3F05 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		DED1317D315EC420B70E679F56B93D38 /* Nunchakus-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nunchakus-prefix.pch"; sourceTree = "<group>"; };
+		D837BF22E9E4A3F6D0B12939A9344692 /* Nunchakus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nunchakus.h; path = Nunchakus/Classes/Nunchakus.h; sourceTree = "<group>"; };
+		D99DC2D762C720541D75EF87DC2E39C7 /* Nunchakus-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Nunchakus-dummy.m"; sourceTree = "<group>"; };
 		E914317245736CFA05CF8CC3EEB763A4 /* Pods-Nunchakus_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Nunchakus_Example.release.xcconfig"; sourceTree = "<group>"; };
 		ED4BCCB3CCE4E56B1B1B565A64C87F41 /* Pods-Nunchakus_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Nunchakus_Tests-umbrella.h"; sourceTree = "<group>"; };
 		EF80B2241A2ECD45BCEDA23955E4003F /* Pods-Nunchakus_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Nunchakus_Tests.modulemap"; sourceTree = "<group>"; };
-		EF8A0D9EEDC838CAFA66DF700383D451 /* NKMargin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NKMargin.m; path = Nunchakus/Classes/NKMargin.m; sourceTree = "<group>"; };
+		F45AFF8195239AF881B5EA0A7BBFF9BC /* Nunchakus-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nunchakus-prefix.pch"; sourceTree = "<group>"; };
+		F742F874B43BA356D74F77713678F530 /* NKAlignment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NKAlignment.m; path = Nunchakus/Classes/NKAlignment.m; sourceTree = "<group>"; };
+		F8959BD3C9853948D6F634C54B827829 /* Nunchakus-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Nunchakus-umbrella.h"; sourceTree = "<group>"; };
 		F8E09B2ADA11A6D12288E880BC8E76C4 /* Pods-Nunchakus_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Nunchakus_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FFAEFD6FA662618BB030CF3B57376A91 /* Nunchakus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Nunchakus.framework; path = Nunchakus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFAEFD6FA662618BB030CF3B57376A91 /* Nunchakus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nunchakus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,42 +130,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46F8DFA12AA8DA715F4B5A48389ACE4C /* Frameworks */ = {
+		ACF2548210C406F522590817660C2EB8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D68CD558BFE755E715211AAA3820DC0 /* Foundation.framework in Frameworks */,
+				BE3AC8A99AFF7B06D7B2DA3C95780BF1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0ECDA59E640850E8975CBF0686006261 /* Nunchakus */ = {
-			isa = PBXGroup;
-			children = (
-				AB870000628DC6E3FF8C7416F794CC81 /* NKAlignment.h */,
-				32A65526569D1D5A764A03898DA1822E /* NKAlignment.m */,
-				99A6E2036575A37D026634C069DCCE2D /* NKLayout.h */,
-				70A6C5CAAFA3E8D7884EEBA376A0250B /* NKLayout.m */,
-				79E0A04D1043CD05BBCF2C84CDE73DD9 /* NKLayoutEnum.h */,
-				5225E2741823DAD1D7D48D0439C33401 /* NKMacroConstant.h */,
-				99A68A221667A0A36A3EF54C1B9BDC52 /* NKMargin.h */,
-				EF8A0D9EEDC838CAFA66DF700383D451 /* NKMargin.m */,
-				71FB26C6084E6AEF4D78D2631A383F3E /* NKMultiple.h */,
-				387F4BA4FC7FF9B9CAD6F3B5C440E48A /* NKMultiple.m */,
-				1BAA8F678D1AF5AC1EA13C2D05868A60 /* NKPadding.h */,
-				2689AB38FCE36650DE240179A20575BB /* NKPadding.m */,
-				5FCB47CD159BA0619EAD17F97F49AF87 /* Nunchakus.h */,
-				B12FD4E5ECB8C8CF87B452AA16A1FDC0 /* UIView+Nunchakus.h */,
-				4AAFAC7EFC9F00EFF564F875FFBFD38C /* UIView+Nunchakus.m */,
-				6D24C143DA8511E075168547A359900A /* Pod */,
-				60BC33AFB1B89AD2D34ADDE0E02C7A84 /* Support Files */,
-			);
-			name = Nunchakus;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		2FA52CEB4693554AD29A853381106C99 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,26 +166,58 @@
 			path = "Target Support Files/Pods-Nunchakus_Tests";
 			sourceTree = "<group>";
 		};
-		60BC33AFB1B89AD2D34ADDE0E02C7A84 /* Support Files */ = {
+		5A3B04F37BC38700BC5CC49623163D60 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D11DA84366199B2F61E80BA308B55FDA /* Nunchakus.modulemap */,
-				B1C097FFFFBD4C27E5342969FA4F2055 /* Nunchakus.xcconfig */,
-				42E3B42649D3781FC0389D390552661E /* Nunchakus-dummy.m */,
-				405F15D5F7D20F65CD31606E9ADB8500 /* Nunchakus-Info.plist */,
-				DED1317D315EC420B70E679F56B93D38 /* Nunchakus-prefix.pch */,
-				5DC2A68F7CB3DEF04D9781A643B506F7 /* Nunchakus-umbrella.h */,
+				C6CCF987AC9B1A32B2F6A966319C4B6A /* Nunchakus.modulemap */,
+				AE5EC5B5B4EBA5CF510D1C5FC639044B /* Nunchakus.xcconfig */,
+				D99DC2D762C720541D75EF87DC2E39C7 /* Nunchakus-dummy.m */,
+				895D93EDADE4665245B06C0253FB12DA /* Nunchakus-Info.plist */,
+				F45AFF8195239AF881B5EA0A7BBFF9BC /* Nunchakus-prefix.pch */,
+				F8959BD3C9853948D6F634C54B827829 /* Nunchakus-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/Nunchakus";
 			sourceTree = "<group>";
 		};
-		6D24C143DA8511E075168547A359900A /* Pod */ = {
+		612942531589B11B8F21BB56A52F478C /* Nunchakus */ = {
 			isa = PBXGroup;
 			children = (
-				D5D49F72B714AD34E1492BBD75FA3F05 /* LICENSE */,
-				145294F5A8552593AE84F5FBAC769DF0 /* Nunchakus.podspec */,
-				16A538A92295889FE358B5E706CEA13B /* README.md */,
+				1E8BA33DBCA496E990D45797596F6F52 /* NKAlignment.h */,
+				F742F874B43BA356D74F77713678F530 /* NKAlignment.m */,
+				A738D45AC796801C6834EE3A17F57EF0 /* NKLayout.h */,
+				66CCBCAE6EDCCEB01B304D51EE4B662A /* NKLayout.m */,
+				B372700F199D1741C79C16BAFD5B9963 /* NKLayoutEnum.h */,
+				89D7BE11C21086CF832733591ECDC7FE /* NKMacroConstant.h */,
+				1D5F41508E9DB316877723D29EAD97F4 /* NKMargin.h */,
+				87A757026D89565F54E5FD79148626F1 /* NKMargin.m */,
+				4237472870F735570FDEE14FE16DF0D6 /* NKMultiple.h */,
+				31D563E740F6724D31006836690E9B97 /* NKMultiple.m */,
+				8B685E9E239556820004E301 /* NKOrigin.h */,
+				8B685E9F239556820004E301 /* NKOrigin.m */,
+				62BA596F0CE94FD5F9C2EF8CEBA0F9FD /* NKPadding.h */,
+				2A3923E7A14A899E2DF9673631BCA854 /* NKPadding.m */,
+				37F88D2D5FD68E8FD7D916DD49E77E78 /* NKRelative.h */,
+				491965B96D6970D6910EFDE5F9E1D8AC /* NKRelative.m */,
+				8B685EA2239556920004E301 /* NKSize.h */,
+				8B685EA3239556920004E301 /* NKSize.m */,
+				D837BF22E9E4A3F6D0B12939A9344692 /* Nunchakus.h */,
+				84E06D50E3A9BF0A42E7FAD4E2649F3F /* Nunchakus.m */,
+				6FEDCC97EF1030C9605893FDB79D01EF /* Pod */,
+				5A3B04F37BC38700BC5CC49623163D60 /* Support Files */,
+				755315FFB516A5C49CA65FE62DA23473 /* UIView+Nunchakus.h */,
+				527D9437EC840E79366D1843ADCC383F /* UIView+Nunchakus.m */,
+			);
+			name = Nunchakus;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		6FEDCC97EF1030C9605893FDB79D01EF /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				403D2608920C0CD8F0DA6EB481B3B9DD /* LICENSE */,
+				4C048AD67095A789E1F14E37BDB0A8B0 /* Nunchakus.podspec */,
+				7B2B8F05828A6EC96DA936FFB379EABF /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
@@ -228,6 +249,14 @@
 			path = "Target Support Files/Pods-Nunchakus_Example";
 			sourceTree = "<group>";
 		};
+		BA40582B34EB79E29B762BB556E02B3F /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				612942531589B11B8F21BB56A52F478C /* Nunchakus */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -240,7 +269,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				FACE200AE2B626560E0C68144C2F082F /* Development Pods */,
+				BA40582B34EB79E29B762BB556E02B3F /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				A7F5C02E2839B3BCFBB549CF0FB21772 /* Products */,
 				2FA52CEB4693554AD29A853381106C99 /* Targets Support Files */,
@@ -255,14 +284,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FACE200AE2B626560E0C68144C2F082F /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0ECDA59E640850E8975CBF0686006261 /* Nunchakus */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -274,20 +295,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7ABCB0D2827113A4D095C091EF8D88CF /* Headers */ = {
+		A7BE9EEDAF470FEB2EBDC3DAB67898E0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DEE90B5E5FC63AF05BF49232C21EAF6F /* NKAlignment.h in Headers */,
-				C61C6AE7161C2D79922ABC2D6E7CF648 /* NKLayout.h in Headers */,
-				8505C97AD0471E970AF9986E70C6C128 /* NKLayoutEnum.h in Headers */,
-				FA63B7BCCDA3A3948F1AB38FCB0D49EC /* NKMacroConstant.h in Headers */,
-				EE0DECD2DE07931F2937312A7F613EC6 /* NKMargin.h in Headers */,
-				8FD5BC1C556FA6EDC4C178F253878473 /* NKMultiple.h in Headers */,
-				58586B53E9067C43AD036FF3F3251EED /* NKPadding.h in Headers */,
-				03E73BC1C623DEE09D65F3949E734E86 /* Nunchakus-umbrella.h in Headers */,
-				160118B4004BAA7C1918C505CE46907B /* Nunchakus.h in Headers */,
-				8C7BF5266A31FDCAD76FD1B2B9103EE4 /* UIView+Nunchakus.h in Headers */,
+				11FC44AA549D6361E14DA9E9B62307D0 /* NKAlignment.h in Headers */,
+				8B685EA0239556820004E301 /* NKOrigin.h in Headers */,
+				6B4908F7A10B71E6C611B7C132C6F945 /* NKLayout.h in Headers */,
+				5966432EA53BF842174C11DCE4D59C11 /* NKLayoutEnum.h in Headers */,
+				0D0AAD466A26B6ED0C7C0AB91DCBCED0 /* NKMacroConstant.h in Headers */,
+				EE0E886EFDE59446DD161A71D5234A27 /* NKMargin.h in Headers */,
+				7619EF9F272F641DA4B57E52C8DD6D26 /* NKMultiple.h in Headers */,
+				0C8A9B1CFDEBE930C617FF6FE52B5A0E /* NKPadding.h in Headers */,
+				0E10B366C57BE32FF3E7D0526E278A58 /* NKRelative.h in Headers */,
+				C6F27F00AFF9AF3A010419649655864F /* Nunchakus-umbrella.h in Headers */,
+				8B685EA4239556920004E301 /* NKSize.h in Headers */,
+				32CB26A899834B7506AABB4541605BCF /* Nunchakus.h in Headers */,
+				29C58AE4C7E0FF78520FF11FA49CE9E2 /* UIView+Nunchakus.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,12 +366,12 @@
 		};
 		551109326B401BEB7D6B66C434826DC2 /* Nunchakus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A8B6CBD2F668A8BE98F630422BD83615 /* Build configuration list for PBXNativeTarget "Nunchakus" */;
+			buildConfigurationList = DC0DB676D967547A605F6E3FF4490446 /* Build configuration list for PBXNativeTarget "Nunchakus" */;
 			buildPhases = (
-				7ABCB0D2827113A4D095C091EF8D88CF /* Headers */,
-				19906D575BE552EE321B3AEDB4035480 /* Sources */,
-				46F8DFA12AA8DA715F4B5A48389ACE4C /* Frameworks */,
-				EB3DD9C13368CA7AC923A77911FE39BC /* Resources */,
+				A7BE9EEDAF470FEB2EBDC3DAB67898E0 /* Headers */,
+				FC956F233A53762875ECC04074F54F38 /* Sources */,
+				ACF2548210C406F522590817660C2EB8 /* Frameworks */,
+				1EF8705FE64DE92DA9A14D7403828A60 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -388,6 +412,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1EF8705FE64DE92DA9A14D7403828A60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2747B72002FA9E5892EFA9E0ABBA2942 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -402,30 +433,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB3DD9C13368CA7AC923A77911FE39BC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		19906D575BE552EE321B3AEDB4035480 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3E558F01D4231C2CF48402A1FAB5BC4B /* NKAlignment.m in Sources */,
-				2644089CCCCBF4E21AEDCF1726F5AA87 /* NKLayout.m in Sources */,
-				E08E8D91C14442E83C1A303BE8A2280D /* NKMargin.m in Sources */,
-				CB6D900406281D2537EC763D6F9D8C86 /* NKMultiple.m in Sources */,
-				308CE41FC1A3DE239DE8ACBA2FC7F05F /* NKPadding.m in Sources */,
-				3532618418A54EF776D2BB478084AE70 /* Nunchakus-dummy.m in Sources */,
-				0C171F6F9417064041CACF889D992CCD /* UIView+Nunchakus.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		68930AA195397BBF2DF4ECB3D31F0E31 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,6 +449,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EFA2E4D05A92B0CBD1C8B353477A5DC /* Pods-Nunchakus_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FC956F233A53762875ECC04074F54F38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37DBE48E431585A50259C272DF90783D /* NKAlignment.m in Sources */,
+				046A6A626B831C1BE3718DF6273C32F4 /* NKLayout.m in Sources */,
+				7DD62527BE5379B4FAE3252B8E293D77 /* NKMargin.m in Sources */,
+				E1490A3D8730357DD40324E96CA680DC /* NKMultiple.m in Sources */,
+				8B685EA5239556920004E301 /* NKSize.m in Sources */,
+				9ADB03950D06397B1CEE8A0FBBBAF592 /* NKPadding.m in Sources */,
+				334585AA676E0B73D5093E67E668105B /* NKRelative.m in Sources */,
+				8B685EA1239556820004E301 /* NKOrigin.m in Sources */,
+				3A1084014A421D7E2757991E78E561BD /* Nunchakus-dummy.m in Sources */,
+				90FE6E227D4D40718B2905A2D723527C /* Nunchakus.m in Sources */,
+				122BA51EF497C093685BAA4138CE49D5 /* UIView+Nunchakus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,37 +589,6 @@
 			};
 			name = Release;
 		};
-		48C1482DE8975630FBE8A4C85D81B2E6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1C097FFFFBD4C27E5342969FA4F2055 /* Nunchakus.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Nunchakus/Nunchakus-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Nunchakus/Nunchakus-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Nunchakus/Nunchakus.modulemap";
-				PRODUCT_MODULE_NAME = Nunchakus;
-				PRODUCT_NAME = Nunchakus;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -645,12 +642,42 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
+		};
+		50584BB60A815453967BEB39D59834AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE5EC5B5B4EBA5CF510D1C5FC639044B /* Nunchakus.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Nunchakus/Nunchakus-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Nunchakus/Nunchakus-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Nunchakus/Nunchakus.modulemap";
+				PRODUCT_MODULE_NAME = Nunchakus;
+				PRODUCT_NAME = Nunchakus;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -749,9 +776,9 @@
 			};
 			name = Debug;
 		};
-		DB213A984F86475828E31188DEC05AAA /* Release */ = {
+		FE0B8DF752B9F8E82D8003533F3A0D76 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B1C097FFFFBD4C27E5342969FA4F2055 /* Nunchakus.xcconfig */;
+			baseConfigurationReference = AE5EC5B5B4EBA5CF510D1C5FC639044B /* Nunchakus.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -811,11 +838,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A8B6CBD2F668A8BE98F630422BD83615 /* Build configuration list for PBXNativeTarget "Nunchakus" */ = {
+		DC0DB676D967547A605F6E3FF4490446 /* Build configuration list for PBXNativeTarget "Nunchakus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				48C1482DE8975630FBE8A4C85D81B2E6 /* Debug */,
-				DB213A984F86475828E31188DEC05AAA /* Release */,
+				50584BB60A815453967BEB39D59834AC /* Debug */,
+				FE0B8DF752B9F8E82D8003533F3A0D76 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

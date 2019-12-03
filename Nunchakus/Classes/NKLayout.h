@@ -20,7 +20,9 @@
 @property (nonatomic, strong, readonly) NKMargin *height;
 @property (nonatomic, strong, readonly) NKMargin *centerX;
 @property (nonatomic, strong, readonly) NKMargin *centerY;
+@property (nonatomic, strong, readonly) NKMargin *edge;
 
 - (instancetype)initWithContext:(UIView *)context;
+- (void)make;
 
 @end

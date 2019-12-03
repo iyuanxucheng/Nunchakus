@@ -8,16 +8,17 @@
 #ifndef NKLayoutEnum_h
 #define NKLayoutEnum_h
 
-typedef NS_ENUM(NSUInteger, NKLayoutAttribute) {
-    NKLayoutAttributeDefault    = 0,
-    NKLayoutAttributeLeft       = 1,
-    NKLayoutAttributeTop        = 2,
-    NKLayoutAttributeRight      = 3,
-    NKLayoutAttributeBottom     = 4,
-    NKLayoutAttributeWidth      = 5,
-    NKLayoutAttributeHeight     = 6,
-    NKLayoutAttributeCenterX    = 7,
-    NKLayoutAttributeCenterY    = 8,
+typedef NS_ENUM(NSUInteger, NKLayoutMarginAttribute) {
+    NKLayoutMarginAttributeLeft       = 1,
+    NKLayoutMarginAttributeTop        = 2,
+    NKLayoutMarginAttributeRight      = 3,
+    NKLayoutMarginAttributeBottom     = 4,
+    NKLayoutMarginAttributeCenterX    = 5,
+    NKLayoutMarginAttributeCenterY    = 6,
+    NKLayoutMarginAttributeWidth      = 7,
+    NKLayoutMarginAttributeHeight     = 8,
+    NKLayoutMarginAttributeEdge       = 9,
+    NKLayoutMarginAttributeDefault    = NKLayoutMarginAttributeLeft,
 };
 
 typedef NS_ENUM(NSUInteger, NKLayoutAttributePriority) {
@@ -28,5 +29,25 @@ typedef NS_ENUM(NSUInteger, NKLayoutAttributePriority) {
     NKLayoutAttributePriorityHight  = 4000,
     NKLayoutAttributePriorityDefault = NKLayoutAttributePriorityNormal,
 };
+
+typedef NS_ENUM(NSUInteger, NKLayoutEdgeAttribute) {
+    NKLayoutAlignmentDefault    = NKLayoutMarginAttributeDefault,
+    NKLayoutAlignmentLeft       = NKLayoutMarginAttributeLeft,
+    NKLayoutAlignmentTop        = NKLayoutMarginAttributeTop,
+    NKLayoutAlignmentRight      = NKLayoutMarginAttributeRight,
+    NKLayoutAlignmentBottom     = NKLayoutMarginAttributeBottom,
+    NKLayoutAlignmentCenterX    = NKLayoutMarginAttributeCenterX,
+    NKLayoutAlignmentCenterY    = NKLayoutMarginAttributeCenterY,
+};
+
+typedef NS_ENUM(NSUInteger, NKLayoutRelativeAttribute) {
+    /// 空间没有重叠 外间距 大于0 互不接壤
+    NKLayoutRelativeTo = 0,
+    /// 空间没有重叠 外间距 等于0 地域接壤
+    NKLayoutRelativeOn = 1,
+    /// 空间有重叠 地域包含
+    NKLayoutRelativeIn = 2,
+};
+
 
 #endif /* NKLayoutEnum_h */
