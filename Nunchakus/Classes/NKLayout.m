@@ -72,14 +72,14 @@
     return _paddingSet;
 }
 
-nk_margin_getter(left, NKLayoutMarginAttributeLeft);
-nk_margin_getter(top, NKLayoutMarginAttributeTop);
-nk_margin_getter(right, NKLayoutMarginAttributeRight);
-nk_margin_getter(bottom, NKLayoutMarginAttributeBottom);
-nk_margin_getter(width, NKLayoutMarginAttributeWidth);
-nk_margin_getter(height, NKLayoutMarginAttributeHeight);
-nk_margin_getter(centerX, NKLayoutMarginAttributeCenterX);
-nk_margin_getter(centerY, NKLayoutMarginAttributeCenterY);
-nk_margin_getter(edge, NKLayoutMarginAttributeEdge);
+nk_layout_getter(left, NKLayoutMarginAttributeLeft);
+nk_layout_getter(top, NKLayoutMarginAttributeTop);
+nk_layout_getter(right, NKLayoutMarginAttributeRight);
+nk_layout_getter(bottom, NKLayoutMarginAttributeBottom);
+nk_layout_getter(width, NKLayoutMarginAttributeWidth);
+nk_layout_getter(height, NKLayoutMarginAttributeHeight);
+nk_layout_getter(centerX, NKLayoutMarginAttributeCenterX);
+nk_layout_getter(centerY, NKLayoutMarginAttributeCenterY);
+nk_layout_getter(edge, NKLayoutMarginAttributeEdge);
 
 @end

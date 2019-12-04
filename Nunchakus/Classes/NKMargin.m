@@ -10,13 +10,17 @@
 #import "NKLayoutEnum.h"
 #import "NKMacroConstant.h"
 #import "NKAlignment.h"
+#import "NKRelative.h"
 
 @interface NKMargin ()
 
 @property (nonatomic, assign) BOOL isStretched;
-@property (nonatomic, assign) CGFloat valueOfOffset;
 @property (nonatomic, assign) NKLayoutMarginAttribute attribute;
 @property (nonatomic, assign) NKLayoutAttributePriority priorityOfAttribute;
+
+@property (nonatomic, assign) CGPoint valueOfCenter;
+@property (nonatomic, assign) CGPoint valueOfOrigin;
+@property (nonatomic, assign) CGSize valueOfSize;
 
 @property (nonatomic, strong) NKMargin *left;
 @property (nonatomic, strong) NKMargin *top;
@@ -27,10 +31,10 @@
 @property (nonatomic, strong) NKMargin *centerX;
 @property (nonatomic, strong) NKMargin *centerY;
 @property (nonatomic, strong) NKMargin *edge;
-@property (nonatomic, strong) NKMargin *relativeMargin;
 
 @property (nonatomic, strong) NKAlignment *aligned;
 @property (nonatomic, strong) NKMultiple *multiple;
+@property (nonatomic, strong) NKRelative *relative;
 
 @end
 
@@ -62,13 +66,6 @@
     };
 }
 
-- (NKMargin *(^)(CGFloat))valueOf {
-    return ^(CGFloat value) {
-        self.valueOfOffset = value;
-        return self;
-    };
-}
-
 - (NKMargin *(^)(NKLayoutAttributePriority))priority {
     return ^(NKLayoutAttributePriority priority) {
         self.priorityOfAttribute = priority;
@@ -76,9 +73,23 @@
     };
 }
 
-- (NKMargin * (^)(id))relativeTo {
-    return ^(id attr){
-        self.relativeMargin = attr;
+- (NKMargin *(^)(CGFloat, CGFloat))center {
+    return ^(CGFloat x, CGFloat y) {
+        self.valueOfCenter = CGPointMake(x, y);
+        return self;
+    };
+}
+
+- (NKMargin *(^)(CGFloat, CGFloat))origin {
+    return ^(CGFloat x, CGFloat y) {
+        self.valueOfOrigin = CGPointMake(x, y);
+        return self;
+    };
+}
+
+- (NKMargin *(^)(CGFloat, CGFloat))size {
+    return ^(CGFloat w, CGFloat h) {
+        self.valueOfSize = CGSizeMake(w, h);
         return self;
     };
 }
@@ -93,6 +104,12 @@
     if (_aligned) return _aligned;
     _aligned = [[NKAlignment alloc] initWithMargin:self];
     return _aligned;
+}
+
+- (NKRelative *)relative {
+    if (_relative) return _relative;
+    _relative = [[NKRelative alloc] initWithMargin:self];
+    return _relative;
 }
 
 nk_margin_getter(left, NKLayoutMarginAttributeLeft);

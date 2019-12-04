@@ -26,6 +26,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NKMargin *nk_centerY;
 @property (nonatomic, strong, readonly) NKMargin *nk_edge;
 
+@property (nonatomic, strong, readonly) NKMargin *(^nk_center)(CGFloat x, CGFloat y);
+@property (nonatomic, strong, readonly) NKMargin *(^nk_origin)(CGFloat x, CGFloat y);
+@property (nonatomic, strong, readonly) NKMargin *(^nk_size)(CGFloat w, CGFloat h);
+
+
 - (void)nk_make;
 - (void)nk_makeLayout:(void(^)(NKLayout *layout))maker;
 

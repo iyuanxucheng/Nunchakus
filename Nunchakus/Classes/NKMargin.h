@@ -18,9 +18,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 是否是弹性的 自动适配屏幕宽度
 @property (nonatomic, assign, readonly) BOOL isStretched;
-@property (nonatomic, assign, readonly) CGFloat valueOfOffset;
 @property (nonatomic, assign, readonly) NKLayoutMarginAttribute attribute;
 @property (nonatomic, assign, readonly) NKLayoutAttributePriority priorityOfAttribute;
+
+@property (nonatomic, assign, readonly) CGPoint valueOfCenter;
+@property (nonatomic, assign, readonly) CGPoint valueOfOrigin;
+@property (nonatomic, assign, readonly) CGSize valueOfSize;
 
 @property (nonatomic, strong, readonly) NKMargin *left;
 @property (nonatomic, strong, readonly) NKMargin *top;
@@ -31,6 +34,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NKMargin *centerX;
 @property (nonatomic, strong, readonly) NKMargin *centerY;
 @property (nonatomic, strong, readonly) NKMargin *edge;
+
+@property (nonatomic, strong, readonly) NKMargin *(^center)(CGFloat x, CGFloat y);
+@property (nonatomic, strong, readonly) NKMargin *(^origin)(CGFloat x, CGFloat y);
+@property (nonatomic, strong, readonly) NKMargin *(^size)(CGFloat w, CGFloat h);
 
 @property (nonatomic, strong, readonly) NKAlignment *aligned;
 @property (nonatomic, strong, readonly) NKMultiple *multiple;

@@ -86,7 +86,7 @@
 
 typedef void (^nk_deferBlock)(void);
 
-#define defer  __strong nk_deferBlock nk_concat(nk_deferBlock_, __LINE__) __attribute__((cleanup(nk_executeDeferBlock), unused)) = ^
+#define defer __strong nk_deferBlock nk_concat(nk_deferBlock_, __LINE__) __attribute__((cleanup(nk_executeDeferBlock), unused)) = ^
 
 
 // proprty
@@ -102,17 +102,26 @@ typedef void (^nk_deferBlock)(void);
 // -- getter --
 
 #define nk_margin_concat(margin_name) _##margin_name
-#define nk_margin_getter(margin_name, margin_enum) \
+#define nk_layout_getter(margin_name, margin_enum) \
 - (NKMargin *)margin_name { \
 if (nk_margin_concat(margin_name)) return nk_margin_concat(margin_name); \
     nk_margin_concat(margin_name) = [[NKMargin alloc] initWithAttribute:margin_enum]; \
     return nk_margin_concat(margin_name); \
-}
+} \
+
+#define nk_margin_getter(margin_name, margin_enum) \
+- (NKMargin *)margin_name { \
+if (nk_margin_concat(margin_name)) return nk_margin_concat(margin_name); \
+    nk_margin_concat(margin_name) = [[NKMargin alloc] initWithAttribute:margin_enum]; \
+    _next = nk_margin_concat(margin_name); \
+    nk_margin_concat(margin_name).head = self; \
+    return nk_margin_concat(margin_name); \
+} \
 
 #define nk_layout_margin_getter(margin_name) \
 - (NKMargin *)nk_##margin_name { \
     return self.nk_layout.margin_name; \
-}
+} \
 
 
 typedef struct __attribute__((objc_boxable)) CGPoint CGPoint;

@@ -16,7 +16,6 @@
 #import "NKMacroConstant.h"
 #import "NKMargin.h"
 #import "NKMultiple.h"
-#import "NKPadding.h"
 #import "NKRelative.h"
 #import "Nunchakus.h"
 #import "UIView+Nunchakus.h"
