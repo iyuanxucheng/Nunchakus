@@ -57,15 +57,15 @@ nk_layout_margin_getter(centerX);
 nk_layout_margin_getter(centerY);
 nk_layout_margin_getter(edge);
 
-- (NKMargin *(^)(CGFloat, CGFloat))nk_center {
+- (NKLayout *(^)(CGFloat, CGFloat))nk_center {
     return self.nk_layout.center;
 }
 
-- (NKMargin *(^)(CGFloat, CGFloat))nk_origin {
+- (NKLayout *(^)(CGFloat, CGFloat))nk_origin {
     return self.nk_layout.origin;
 }
 
-- (NKMargin *(^)(CGFloat, CGFloat))nk_size {
+- (NKLayout *(^)(CGFloat, CGFloat))nk_size {
     return self.nk_layout.size;
 }
 

@@ -22,9 +22,9 @@
 @property (nonatomic, strong, readonly) NKMargin *centerY;
 @property (nonatomic, strong, readonly) NKMargin *edge;
 
-@property (nonatomic, strong, readonly) NKMargin *(^center)(CGFloat x, CGFloat y);
-@property (nonatomic, strong, readonly) NKMargin *(^origin)(CGFloat x, CGFloat y);
-@property (nonatomic, strong, readonly) NKMargin *(^size)(CGFloat w, CGFloat h);
+@property (nonatomic, strong, readonly) NKLayout *(^center)(CGFloat x, CGFloat y);
+@property (nonatomic, strong, readonly) NKLayout *(^origin)(CGFloat x, CGFloat y);
+@property (nonatomic, strong, readonly) NKLayout *(^size)(CGFloat w, CGFloat h);
 
 
 - (instancetype)initWithContext:(UIView *)context;

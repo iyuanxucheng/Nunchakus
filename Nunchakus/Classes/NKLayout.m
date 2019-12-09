@@ -9,11 +9,13 @@
 
 @interface NKLayout ()
 
+@property (nonatomic, assign) CGPoint valueOfCenter;
+@property (nonatomic, assign) CGPoint valueOfOrigin;
+@property (nonatomic, assign) CGSize valueOfSize;
+
 @property (nonatomic, weak) UIView *context;
 
-@property (nonatomic, strong) NSMutableSet *marginSet;
-@property (nonatomic, strong) NSMutableSet *paddingSet;
-
+@property (nonatomic, strong) NSMutableSet<NKMargin *> *marginSet;
 
 @property (nonatomic, strong) NKMargin *left;
 @property (nonatomic, strong) NKMargin *top;
@@ -42,15 +44,40 @@
     self = [super init];
     if (self) {
         _context = context;
+        _valueOfOrigin = CGPointMake(NSUIntegerMax, NSUIntegerMax);
+        _valueOfSize = CGSizeMake(NSUIntegerMax, NSUIntegerMax);
+        _valueOfCenter = CGPointMake(NSUIntegerMax, NSUIntegerMax);
     }
     return self;
 }
 
 - (void)make {
     
+    CGPoint maxPoint = CGPointMake(NSUIntegerMax, NSUIntegerMax);
+    CGSize maxSize = CGSizeMake(NSUIntegerMax, NSUIntegerMax);
+    
+    BOOL isValidSize = !CGSizeEqualToSize(_valueOfSize, maxSize);
+    BOOL isValidOrigin = !CGPointEqualToPoint(_valueOfOrigin, maxPoint);
+    BOOL isValidCenter = !CGPointEqualToPoint(_valueOfCenter, maxPoint);
+
+    if (isValidOrigin && isValidSize) {
+        CGRect frame = (CGRect){_valueOfOrigin, _valueOfSize};
+        [self layoutWithFrame:frame];
+        return;
+    }
+    
+    if (isValidCenter && isValidSize) {
+        CGPoint origin = CGPointMake(_valueOfCenter.x - (_valueOfSize.width * 0.5), _valueOfCenter.y - (_valueOfSize.height * 0.5));
+        CGRect frame = (CGRect){origin, _valueOfSize};
+        [self layoutWithFrame:frame];
+        return;
+    }
+    
+    CGRect frame = [self calculateFrameWithMarginSet];
+    [self layoutWithFrame:frame];
 }
 
-- (CGRect)calculateFrameWithMargins:(NSSet<NKMargin *> *)margins {
+- (CGRect)calculateFrameWithMarginSet {
     return CGRectZero;
 }
 
@@ -58,18 +85,33 @@
     _context.frame = frame;
 }
 
+- (NKLayout *(^)(CGFloat, CGFloat))center {
+    return ^(CGFloat x, CGFloat y) {
+        self.valueOfCenter = CGPointMake(x, y);
+        return self;
+    };
+}
+
+- (NKLayout *(^)(CGFloat, CGFloat))origin {
+    return ^(CGFloat x, CGFloat y) {
+        self.valueOfOrigin = CGPointMake(x, y);
+        return self;
+    };
+}
+
+- (NKLayout *(^)(CGFloat, CGFloat))size {
+    return ^(CGFloat w, CGFloat h) {
+        self.valueOfSize = CGSizeMake(w, h);
+        return self;
+    };
+}
+
 #pragma getter
 
-- (NSMutableSet *)marginSet {
+- (NSMutableSet<NKMargin *> *)marginSet {
     if (_marginSet) return _marginSet;
     _marginSet = [[NSMutableSet alloc] initWithCapacity:4];
     return _marginSet;
-}
-
-- (NSMutableSet *)paddingSet {
-    if (_paddingSet) return _paddingSet;
-    _paddingSet = [[NSMutableSet alloc] initWithCapacity:4];
-    return _paddingSet;
 }
 
 nk_layout_getter(left, NKLayoutMarginAttributeLeft);

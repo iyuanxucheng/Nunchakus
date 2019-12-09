@@ -106,6 +106,7 @@ typedef void (^nk_deferBlock)(void);
 - (NKMargin *)margin_name { \
 if (nk_margin_concat(margin_name)) return nk_margin_concat(margin_name); \
     nk_margin_concat(margin_name) = [[NKMargin alloc] initWithAttribute:margin_enum]; \
+    [self.marginSet addObject:nk_margin_concat(margin_name)]; \
     return nk_margin_concat(margin_name); \
 } \
 
